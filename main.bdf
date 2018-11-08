@@ -22,7 +22,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -144 504 56 520)
+	(rect -160 512 40 528)
 	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
 	(text "system_input[17..0]" (rect 5 0 104 12)(font "Arial" ))
 	(pt 200 8)
@@ -70,7 +70,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect -144 376 24 392)
+	(rect -136 376 32 392)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "enable1" (rect 5 0 43 12)(font "Arial" ))
 	(pt 168 8)
@@ -376,7 +376,7 @@ agreement for further details.
 (symbol
 	(rect 744 168 960 280)
 	(text "ALU" (rect 5 0 26 12)(font "Arial" ))
-	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(text "ALUint" (rect 8 96 41 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -586,10 +586,6 @@ agreement for further details.
 	(pt 136 384)
 )
 (connector
-	(pt 24 384)
-	(pt 88 384)
-)
-(connector
 	(pt 24 448)
 	(pt 88 448)
 )
@@ -608,16 +604,6 @@ agreement for further details.
 (connector
 	(pt 248 512)
 	(pt 248 544)
-	(bus)
-)
-(connector
-	(pt 56 512)
-	(pt 248 512)
-	(bus)
-)
-(connector
-	(pt 248 512)
-	(pt 272 512)
 	(bus)
 )
 (connector
@@ -673,6 +659,25 @@ agreement for further details.
 	(pt 960 472)
 	(pt 1200 472)
 	(bus)
+)
+(connector
+	(pt 40 512)
+	(pt 40 520)
+	(bus)
+)
+(connector
+	(pt 40 512)
+	(pt 248 512)
+	(bus)
+)
+(connector
+	(pt 248 512)
+	(pt 272 512)
+	(bus)
+)
+(connector
+	(pt 88 384)
+	(pt 32 384)
 )
 (junction (pt 1200 472))
 (junction (pt 272 488))
