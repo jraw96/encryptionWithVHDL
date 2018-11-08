@@ -1,0 +1,40 @@
+-- Algorithm Logic Unit
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ALU is
+	port(message : IN std_logic_vector(7 downto 0);
+			code : IN std_logic_vector(2 downto 0);
+			encrypted : OUT std_logic_vector(7 downto 0)
+	);
+end ALU;
+	
+	
+architecture options of ALU is
+begin 
+	process(code)
+		begin 
+		case code is
+			when "000" => -- Perform the LSFR
+			
+				encrypted <= std_logic_vector(unsigned(SA) and "00000000");
+				
+			when "001"=> -- Perform the second guy
+				encrypted <= std_logic_vector(unsigned(SA) or unsigned(SB));
+				
+			when "010"=> -- Perform the third guy
+				encrypted <= std_logic_vector(unsigned(SA) xor unsigned(SB));
+			
+			when others =>
+				encrypted = "00000000"
+				
+			end case;
+		end process;
+end menu; -- end process 
+
+				
+	
+	
+

@@ -1,0 +1,43 @@
+|ALU
+message[0] => RESULT.IN0
+message[1] => RESULT.IN0
+message[2] => RESULT.IN0
+message[3] => RESULT.IN0
+message[4] => RESULT.IN0
+message[5] => RESULT.IN0
+message[6] => RESULT.IN0
+message[7] => RESULT.IN0
+seed[0] => RESULT.IN1
+seed[1] => RESULT.IN1
+seed[2] => RESULT.IN1
+seed[3] => RESULT.IN1
+seed[4] => RESULT.IN1
+seed[5] => RESULT.IN1
+seed[6] => RESULT.IN1
+seed[7] => RESULT.IN1
+algorithm[0] => Mux0.IN5
+algorithm[0] => Mux1.IN5
+algorithm[0] => Mux2.IN5
+algorithm[0] => Mux3.IN5
+algorithm[0] => Mux4.IN5
+algorithm[0] => Mux5.IN5
+algorithm[0] => Mux6.IN5
+algorithm[0] => Mux7.IN5
+algorithm[1] => Mux0.IN4
+algorithm[1] => Mux1.IN4
+algorithm[1] => Mux2.IN4
+algorithm[1] => Mux3.IN4
+algorithm[1] => Mux4.IN4
+algorithm[1] => Mux5.IN4
+algorithm[1] => Mux6.IN4
+algorithm[1] => Mux7.IN4
+encrypted[0] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
+encrypted[1] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+encrypted[2] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+encrypted[3] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+encrypted[4] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+encrypted[5] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+encrypted[6] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+encrypted[7] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
