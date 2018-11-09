@@ -26,13 +26,13 @@ begin
 		encrypted <= I0;
 		plainText <= I1;
 	 
-		if (encrypted /= "000000000000000000000000000") and (plainText = "00000") then
+		if (encrypted /= "00000000000000000000000000000000") and (plainText = "00000") then
 		
 			F <=  encrypted;  
 
-		elsif (encrypted = "000000000000000000000000000") and (plainText /= "00000")then
+		elsif (encrypted = "00000000000000000000000000000000") and (plainText /= "00000")then
 	
-			F <= plainText & padding;
+			F <= padding & plainText;
 			
 
 		end if;

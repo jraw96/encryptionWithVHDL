@@ -1,5 +1,5 @@
 Analysis & Synthesis report for version3
-Fri Nov 09 16:21:40 2018
+Fri Nov 09 17:02:22 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -16,7 +16,7 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Mux:inst29
+ 11. Parameter Settings for User Entity Instance: newMux:inst4
  12. Parameter Settings for User Entity Instance: varbitreg:inst
  13. Parameter Settings for User Entity Instance: varbitreg:inst23
  14. Post-Synthesis Netlist Statistics for Top Partition
@@ -48,15 +48,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 09 16:21:40 2018      ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 09 17:02:22 2018      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; version3                                   ;
 ; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 28                                         ;
-;     Total combinational functions  ; 23                                         ;
-;     Dedicated logic registers      ; 5                                          ;
-; Total registers                    ; 5                                          ;
+; Total logic elements               ; 56                                         ;
+;     Total combinational functions  ; 46                                         ;
+;     Dedicated logic registers      ; 10                                         ;
+; Total registers                    ; 10                                         ;
 ; Total pins                         ; 78                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -171,40 +171,40 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; varbitreg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/varbitreg.vhd      ;         ;
 ; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Azorac/Desktop/version3/main.bdf           ;         ;
 ; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/ALU.vhd            ;         ;
-; Mux.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/Mux.vhd            ;         ;
 ; sevenSegDriver.vhd               ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/sevenSegDriver.vhd ;         ;
 ; filter.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/filter.vhd         ;         ;
+; newMux.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/newMux.vhd         ;         ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                          ;
-+---------------------------------------------+------------------------+
-; Resource                                    ; Usage                  ;
-+---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 28                     ;
-;                                             ;                        ;
-; Total combinational functions               ; 23                     ;
-; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 7                      ;
-;     -- 3 input functions                    ; 11                     ;
-;     -- <=2 input functions                  ; 5                      ;
-;                                             ;                        ;
-; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 23                     ;
-;     -- arithmetic mode                      ; 0                      ;
-;                                             ;                        ;
-; Total registers                             ; 5                      ;
-;     -- Dedicated logic registers            ; 5                      ;
-;     -- I/O registers                        ; 0                      ;
-;                                             ;                        ;
-; I/O pins                                    ; 78                     ;
-; Embedded Multiplier 9-bit elements          ; 0                      ;
-; Maximum fan-out node                        ; filter:instFilter|F[1] ;
-; Maximum fan-out                             ; 16                     ;
-; Total fan-out                               ; 206                    ;
-; Average fan-out                             ; 1.12                   ;
-+---------------------------------------------+------------------------+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 56                ;
+;                                             ;                   ;
+; Total combinational functions               ; 46                ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 22                ;
+;     -- 3 input functions                    ; 18                ;
+;     -- <=2 input functions                  ; 6                 ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 46                ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 10                ;
+;     -- Dedicated logic registers            ; 10                ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 78                ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+; Maximum fan-out node                        ; filter:inst5|F[5] ;
+; Maximum fan-out                             ; 15                ;
+; Total fan-out                               ; 306               ;
+; Average fan-out                             ; 1.44              ;
++---------------------------------------------+-------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,62 +212,64 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; |main                      ; 23 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 78   ; 0            ; |main                       ; work         ;
+; |main                      ; 46 (0)            ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 78   ; 0            ; |main                       ; work         ;
 ;    |ALU:inst24|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ALU:inst24            ; work         ;
-;    |Mux:inst29|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|Mux:inst29            ; work         ;
-;    |filter:instFilter|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|filter:instFilter     ; work         ;
-;    |sevenSegDriver:inst15| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst15 ; work         ;
+;    |filter:inst5|          ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|filter:inst5          ; work         ;
+;    |newMux:inst4|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|newMux:inst4          ; work         ;
+;    |sevenSegDriver:inst15| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst15 ; work         ;
+;    |sevenSegDriver:inst16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst16 ; work         ;
 ;    |sevenSegDriver:inst22| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst22 ; work         ;
 ;    |varbitreg:inst23|      ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:inst23      ; work         ;
+;    |varbitreg:inst|        ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:inst        ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                     ;
-+-----------------------------------------------------+--------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal      ; Free of Timing Hazards ;
-+-----------------------------------------------------+--------------------------+------------------------+
-; filter:instFilter|F[0]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[1]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[2]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[3]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[4]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[5]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[6]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[7]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[8]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[9]                              ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[10]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[11]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[12]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[13]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[14]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[15]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[16]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[17]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[18]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[19]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[24]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[25]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[26]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[27]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[28]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[29]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[30]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[31]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[20]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[21]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[22]                             ; filter:instFilter|Equal0 ; yes                    ;
-; filter:instFilter|F[23]                             ; filter:instFilter|Equal0 ; yes                    ;
-; ALU:inst24|feedback                                 ; ALU:inst24|Mux17         ; yes                    ;
-; Mux:inst29|plainText[0]                             ; Mux:inst29|F[31]         ; yes                    ;
-; Mux:inst29|plainText[1]                             ; Mux:inst29|F[31]         ; yes                    ;
-; Mux:inst29|plainText[2]                             ; Mux:inst29|F[31]         ; yes                    ;
-; Mux:inst29|plainText[3]                             ; Mux:inst29|F[31]         ; yes                    ;
-; Mux:inst29|plainText[4]                             ; Mux:inst29|F[31]         ; yes                    ;
-; Number of user-specified and inferred latches = 38  ;                          ;                        ;
-+-----------------------------------------------------+--------------------------+------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; filter:inst5|F[0]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[1]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[2]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[3]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[4]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[5]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[6]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[7]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[8]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[9]                                   ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[10]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[11]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[12]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[13]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[14]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[15]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[16]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[17]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[18]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[19]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[24]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[25]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[26]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[27]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[28]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[29]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[30]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[31]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[20]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[21]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[22]                                  ; filter:inst5|F[31]  ; yes                    ;
+; filter:inst5|F[23]                                  ; filter:inst5|F[31]  ; yes                    ;
+; newMux:inst4|plainText[0]                           ; newMux:inst4|F[31]  ; yes                    ;
+; ALU:inst24|feedback                                 ; ALU:inst24|Mux17    ; yes                    ;
+; newMux:inst4|plainText[1]                           ; newMux:inst4|F[31]  ; yes                    ;
+; newMux:inst4|plainText[2]                           ; newMux:inst4|F[31]  ; yes                    ;
+; newMux:inst4|plainText[3]                           ; newMux:inst4|F[31]  ; yes                    ;
+; newMux:inst4|plainText[4]                           ; newMux:inst4|F[31]  ; yes                    ;
+; Number of user-specified and inferred latches = 38  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -276,32 +278,32 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 10    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |main|Mux:inst29|plainText[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |main|newMux:inst4|plainText[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux:inst29 ;
-+----------------+----------+-----------------------------+
-; Parameter Name ; Value    ; Type                        ;
-+----------------+----------+-----------------------------+
-; blank          ; 00000000 ; Unsigned Binary             ;
-+----------------+----------+-----------------------------+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: newMux:inst4 ;
++----------------+----------+-------------------------------+
+; Parameter Name ; Value    ; Type                          ;
++----------------+----------+-------------------------------+
+; blank          ; 00000000 ; Unsigned Binary               ;
++----------------+----------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -331,18 +333,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 78                          ;
-; cycloneiii_ff         ; 5                           ;
-;     ENA               ; 5                           ;
-; cycloneiii_lcell_comb ; 25                          ;
-;     normal            ; 25                          ;
+; cycloneiii_ff         ; 10                          ;
+;     ENA               ; 10                          ;
+; cycloneiii_lcell_comb ; 49                          ;
+;     normal            ; 49                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 7                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 22                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.32                        ;
+; Average LUT depth     ; 2.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -361,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Fri Nov 09 16:21:38 2018
+    Info: Processing started: Fri Nov 09 17:02:20 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off version3 -c version3
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file varbitreg.vhd
@@ -382,16 +384,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file sevense
 Info (12021): Found 2 design units, including 1 entities, in source file filter.vhd
     Info (12022): Found design unit 1: filter-arch
     Info (12023): Found entity 1: filter
+Info (12021): Found 2 design units, including 1 entities, in source file newmux.vhd
+    Info (12022): Found design unit 1: newMux-arch
+    Info (12023): Found entity 1: newMux
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "sevenSegDriver" for hierarchy "sevenSegDriver:inst22"
-Info (12128): Elaborating entity "filter" for hierarchy "filter:instFilter"
+Info (12128): Elaborating entity "filter" for hierarchy "filter:inst5"
 Warning (10540): VHDL Signal Declaration warning at filter.vhd(20): used explicit default value for signal "padding" because signal was never assigned a value
 Warning (10492): VHDL Process Statement warning at filter.vhd(29): signal "encrypted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at filter.vhd(29): comparison between unequal length operands always returns TRUE
 Warning (10492): VHDL Process Statement warning at filter.vhd(29): signal "plainText" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at filter.vhd(31): signal "encrypted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at filter.vhd(33): signal "encrypted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10620): VHDL warning at filter.vhd(33): comparison between unequal length operands always returns FALSE
+Warning (10492): VHDL Process Statement warning at filter.vhd(33): signal "plainText" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at filter.vhd(35): signal "padding" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at filter.vhd(35): signal "plainText" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at filter.vhd(23): inferring latch(es) for signal or variable "F", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "F[0]" at filter.vhd(23)
 Info (10041): Inferred latch for "F[1]" at filter.vhd(23)
@@ -425,51 +431,51 @@ Info (10041): Inferred latch for "F[28]" at filter.vhd(23)
 Info (10041): Inferred latch for "F[29]" at filter.vhd(23)
 Info (10041): Inferred latch for "F[30]" at filter.vhd(23)
 Info (10041): Inferred latch for "F[31]" at filter.vhd(23)
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:inst29"
-Warning (10492): VHDL Process Statement warning at Mux.vhd(35): signal "toggle1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Mux.vhd(36): signal "toggle2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Mux.vhd(42): signal "encrypted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Mux.vhd(45): signal "original" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Mux.vhd(49): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at Mux.vhd(32): inferring latch(es) for signal or variable "F", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Mux.vhd(32): inferring latch(es) for signal or variable "plainText", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "plainText[0]" at Mux.vhd(32)
-Info (10041): Inferred latch for "plainText[1]" at Mux.vhd(32)
-Info (10041): Inferred latch for "plainText[2]" at Mux.vhd(32)
-Info (10041): Inferred latch for "plainText[3]" at Mux.vhd(32)
-Info (10041): Inferred latch for "plainText[4]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[0]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[1]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[2]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[3]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[4]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[5]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[6]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[7]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[8]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[9]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[10]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[11]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[12]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[13]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[14]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[15]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[16]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[17]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[18]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[19]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[20]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[21]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[22]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[23]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[24]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[25]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[26]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[27]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[28]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[29]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[30]" at Mux.vhd(32)
-Info (10041): Inferred latch for "F[31]" at Mux.vhd(32)
+Info (12128): Elaborating entity "newMux" for hierarchy "newMux:inst4"
+Warning (10492): VHDL Process Statement warning at newMux.vhd(36): signal "toggle1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at newMux.vhd(37): signal "toggle2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at newMux.vhd(43): signal "encrypted" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at newMux.vhd(46): signal "original" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at newMux.vhd(50): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at newMux.vhd(33): inferring latch(es) for signal or variable "F", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at newMux.vhd(33): inferring latch(es) for signal or variable "plainText", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "plainText[0]" at newMux.vhd(33)
+Info (10041): Inferred latch for "plainText[1]" at newMux.vhd(33)
+Info (10041): Inferred latch for "plainText[2]" at newMux.vhd(33)
+Info (10041): Inferred latch for "plainText[3]" at newMux.vhd(33)
+Info (10041): Inferred latch for "plainText[4]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[0]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[1]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[2]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[3]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[4]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[5]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[6]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[7]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[8]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[9]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[10]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[11]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[12]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[13]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[14]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[15]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[16]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[17]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[18]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[19]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[20]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[21]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[22]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[23]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[24]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[25]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[26]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[27]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[28]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[29]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[30]" at newMux.vhd(33)
+Info (10041): Inferred latch for "F[31]" at newMux.vhd(33)
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst24"
 Warning (10541): VHDL Signal Declaration warning at ALU.vhd(21): used implicit default value for signal "encryptedMessage" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10492): VHDL Process Statement warning at ALU.vhd(30): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -478,86 +484,94 @@ Warning (10492): VHDL Process Statement warning at ALU.vhd(31): signal "feedback
 Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "feedback", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "feedback" at ALU.vhd(25)
 Info (12128): Elaborating entity "varbitreg" for hierarchy "varbitreg:inst"
-Warning (14026): LATCH primitive "Mux:inst29|F[3]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[2]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[1]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[0]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[7]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[6]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[5]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[4]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[11]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[10]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[9]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[8]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[15]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[14]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[13]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[12]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[19]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[18]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[17]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[16]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[27]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[26]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[25]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[24]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[31]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[30]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[29]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[28]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[23]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[22]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[21]" is permanently enabled
-Warning (14026): LATCH primitive "Mux:inst29|F[20]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[3]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[0]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[1]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[2]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[4]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[5]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[6]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[7]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[8]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[9]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[10]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[11]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[12]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[13]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[14]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[15]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[16]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[17]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[18]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[19]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[20]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[21]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[22]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[23]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[24]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[25]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[26]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[27]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[28]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[29]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[30]" is permanently enabled
+Warning (14026): LATCH primitive "newMux:inst4|F[31]" is permanently enabled
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[3]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[7]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[5]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[11]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[9]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[15]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[13]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[19]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[17]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[27]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[25]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[31]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[29]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[23]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[21]" merged with LATCH primitive "filter:instFilter|F[1]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[30]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[28]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[26]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[24]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[22]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[20]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[18]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[16]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[14]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[12]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[10]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[8]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[6]" merged with LATCH primitive "filter:instFilter|F[2]"
-    Info (13026): Duplicate LATCH primitive "filter:instFilter|F[4]" merged with LATCH primitive "filter:instFilter|F[2]"
-Warning (13012): Latch Mux:inst29|plainText[0] has unsafe behavior
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[7]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[11]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[9]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[15]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[13]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[19]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[17]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[27]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[25]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[31]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[29]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[23]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[21]" merged with LATCH primitive "filter:inst5|F[5]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[10]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[8]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[14]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[12]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[18]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[16]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[26]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[24]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[30]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[28]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[22]" merged with LATCH primitive "filter:inst5|F[6]"
+    Info (13026): Duplicate LATCH primitive "filter:inst5|F[20]" merged with LATCH primitive "filter:inst5|F[6]"
+Warning (13012): Latch filter:inst5|F[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal newMux:inst4|plainText[0]
+Warning (13012): Latch filter:inst5|F[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal newMux:inst4|plainText[1]
+Warning (13012): Latch filter:inst5|F[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal newMux:inst4|plainText[2]
+Warning (13012): Latch filter:inst5|F[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal newMux:inst4|plainText[3]
+Warning (13012): Latch filter:inst5|F[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal newMux:inst4|plainText[4]
+Warning (13012): Latch filter:inst5|F[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal system_input[17]
+Warning (13012): Latch filter:inst5|F[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal system_input[17]
+Warning (13012): Latch newMux:inst4|plainText[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pin_name4
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pin_name4
-Warning (13012): Latch Mux:inst29|plainText[1] has unsafe behavior
+Warning (13012): Latch newMux:inst4|plainText[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pin_name4
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pin_name4
-Warning (13012): Latch Mux:inst29|plainText[2] has unsafe behavior
+Warning (13012): Latch newMux:inst4|plainText[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pin_name4
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pin_name4
-Warning (13012): Latch Mux:inst29|plainText[3] has unsafe behavior
+Warning (13012): Latch newMux:inst4|plainText[3] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pin_name4
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pin_name4
-Warning (13012): Latch Mux:inst29|plainText[4] has unsafe behavior
+Warning (13012): Latch newMux:inst4|plainText[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal pin_name4
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pin_name4
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "digit2[5]" is stuck at GND
-    Warning (13410): Pin "digit2[0]" is stuck at GND
     Warning (13410): Pin "digit3[5]" is stuck at GND
     Warning (13410): Pin "digit3[0]" is stuck at GND
     Warning (13410): Pin "digit4[5]" is stuck at GND
@@ -580,13 +594,13 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "system_input[7]"
     Warning (15610): No output dependent on input pin "system_input[6]"
     Warning (15610): No output dependent on input pin "system_input[5]"
-Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 134 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 28 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info (21061): Implemented 56 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 104 warnings
     Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Fri Nov 09 16:21:40 2018
+    Info: Processing ended: Fri Nov 09 17:02:22 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

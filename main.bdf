@@ -120,6 +120,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2240 8 2296 24))
 )
 (pin
 	(output)
@@ -136,6 +137,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2232 104 2288 120))
 )
 (pin
 	(output)
@@ -152,6 +154,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2224 208 2288 224))
 )
 (pin
 	(output)
@@ -168,6 +171,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2224 320 2280 336))
 )
 (pin
 	(output)
@@ -184,6 +188,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2224 416 2288 432))
 )
 (pin
 	(output)
@@ -200,6 +205,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2216 520 2280 536))
 )
 (pin
 	(output)
@@ -216,6 +222,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2216 624 2280 640))
 )
 (pin
 	(output)
@@ -232,6 +239,7 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2208 736 2272 752))
 )
 (symbol
 	(rect 88 368 136 400)
@@ -606,8 +614,8 @@ agreement for further details.
 )
 (symbol
 	(rect 800 440 984 584)
-	(text "Mux" (rect 5 0 25 12)(font "Arial" ))
-	(text "inst29" (rect 8 128 37 140)(font "Arial" ))
+	(text "newMux" (rect 5 0 43 12)(font "Arial" ))
+	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -670,7 +678,7 @@ agreement for further details.
 (symbol
 	(rect 1216 440 1376 520)
 	(text "filter" (rect 5 0 27 12)(font "Arial" ))
-	(text "instFilter" (rect 8 64 50 76)(font "Arial" ))
+	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -851,11 +859,6 @@ agreement for further details.
 	(pt 192 400)
 )
 (connector
-	(pt 560 176)
-	(pt 680 176)
-	(bus)
-)
-(connector
 	(pt 576 368)
 	(pt 640 368)
 	(bus)
@@ -987,12 +990,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "system_input[4..0]" (rect 282 472 375 484)(font "Arial" ))
-	(pt 272 488)
-	(pt 800 488)
-	(bus)
-)
-(connector
 	(pt 984 472)
 	(pt 1216 472)
 	(bus)
@@ -1042,8 +1039,29 @@ agreement for further details.
 	(pt 2032 728)
 	(bus)
 )
+(connector
+	(pt 592 176)
+	(pt 592 488)
+	(bus)
+)
+(connector
+	(pt 592 488)
+	(pt 800 488)
+	(bus)
+)
+(connector
+	(pt 560 176)
+	(pt 592 176)
+	(bus)
+)
+(connector
+	(pt 592 176)
+	(pt 680 176)
+	(bus)
+)
 (junction (pt 272 488))
 (junction (pt 272 512))
 (junction (pt 256 256))
 (junction (pt 192 384))
 (junction (pt 640 368))
+(junction (pt 592 176))

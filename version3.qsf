@@ -96,9 +96,6 @@ set_location_assignment PIN_M23 -to Enable
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
 set_global_assignment -name CDF_FILE output_files/Chain4.cdf
 set_global_assignment -name VHDL_FILE filter.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_W28 -to digit3[6]
 set_location_assignment PIN_W27 -to digit3[5]
 set_location_assignment PIN_Y26 -to digit3[4]
@@ -133,7 +130,7 @@ set_location_assignment PIN_AB15 -to digit7[4]
 set_location_assignment PIN_AB17 -to digit7[3]
 set_location_assignment PIN_AA16 -to digit7[2]
 set_location_assignment PIN_AB16 -to digit7[1]
-set_location_assignment PIN_A17 -to digit7[0]
+set_location_assignment PIN_AA17 -to digit7[0]
 set_location_assignment PIN_AH18 -to diit6[6]
 set_location_assignment PIN_AF18 -to diit6[5]
 set_location_assignment PIN_AG19 -to diit6[4]
@@ -141,4 +138,11 @@ set_location_assignment PIN_AH19 -to diit6[3]
 set_location_assignment PIN_AB18 -to diit6[2]
 set_location_assignment PIN_AC18 -to diit6[1]
 set_location_assignment PIN_AD18 -to diit6[0]
+set_global_assignment -name VHDL_FILE newMux.vhd
+set_global_assignment -name CDF_FILE Chain5.cdf
+set_global_assignment -name CDF_FILE output_files/Chain6.cdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain7.cdf
