@@ -24,7 +24,7 @@ begin
 		case algorithm is
 			when "00" => -- Perform the LSFR
 			
-				encrypted <= std_logic_vector(unsigned(message) and unsigned(seed));
+				encrypted <= message;
 				
 			when "01"=> -- Perform the second guy
 				encrypted <= "00000000";
