@@ -58,7 +58,7 @@ agreement for further details.
 	(input)
 	(rect -152 576 16 592)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pin_name4" (rect 5 0 59 12)(font "Arial" ))
+	(text "pin_name4" (rect 5 0 58 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -75,7 +75,7 @@ agreement for further details.
 	(input)
 	(rect -144 624 24 640)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pin_name5" (rect 5 0 59 12)(font "Arial" ))
+	(text "pin_name5" (rect 5 0 58 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -92,7 +92,7 @@ agreement for further details.
 	(input)
 	(rect -128 376 40 392)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Enable" (rect 5 0 39 12)(font "Arial" ))
+	(text "Enable" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -107,7 +107,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1608 248 1784 264)
+	(rect 2064 -8 2240 8)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "digit1[6..0]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
@@ -120,11 +120,10 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1784 264 1840 280))
 )
 (pin
 	(output)
-	(rect 1624 552 1800 568)
+	(rect 2056 88 2232 104)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "digit2[6..0]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
@@ -137,50 +136,101 @@ agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1800 568 1856 584))
 )
-(symbol
-	(rect 1264 224 1512 304)
-	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
-	(text "inst4" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 248 32)
-		(output)
-		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
-		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
-		(line (pt 248 32)(pt 232 32)(line_width 3))
-	)
+(pin
+	(output)
+	(rect 2048 192 2224 208)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "digit3[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
 	(drawing
-		(rectangle (rect 16 16 232 64))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
 	)
 )
-(symbol
-	(rect 1256 528 1504 608)
-	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
-	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 248 32)
-		(output)
-		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
-		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
-		(line (pt 248 32)(pt 232 32)(line_width 3))
-	)
+(pin
+	(output)
+	(rect 2048 304 2224 320)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "digit4[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
 	(drawing
-		(rectangle (rect 16 16 232 64))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 2048 400 2224 416)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "digit5[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 2040 504 2216 520)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "diit6[6..0]" (rect 90 0 136 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 2040 608 2216 624)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "digit7[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 2032 720 2208 736)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "digit8[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
 	)
 )
 (symbol
@@ -234,62 +284,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 800 440 952 584)
-	(text "Mux" (rect 5 0 25 12)(font "Arial" ))
-	(text "inst1" (rect 8 128 31 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "I0[7..0]" (rect 0 0 35 12)(font "Arial" ))
-		(text "I0[7..0]" (rect 21 27 56 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "I1[7..0]" (rect 0 0 35 12)(font "Arial" ))
-		(text "I1[7..0]" (rect 21 43 56 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "I2[7..0]" (rect 0 0 35 12)(font "Arial" ))
-		(text "I2[7..0]" (rect 21 59 56 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "toggle1" (rect 0 0 35 12)(font "Arial" ))
-		(text "toggle1" (rect 21 75 56 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "toggle2" (rect 0 0 35 12)(font "Arial" ))
-		(text "toggle2" (rect 21 91 56 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "F[7..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "F[7..0]" (rect 104 27 137 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32)(line_width 3))
-	)
-	(parameter
-		"blank"
-		"00000000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(drawing
-		(rectangle (rect 16 16 136 128))
-	)
-	(annotation_block (parameter)(rect 952 408 1160 440))
-)
-(symbol
 	(rect 88 616 136 648)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst12" (rect 3 21 32 33)(font "Arial" ))
@@ -315,39 +309,179 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 744 168 960 280)
-	(text "ALU" (rect 5 0 26 12)(font "Arial" ))
-	(text "alu" (rect 8 96 22 108)(font "Arial" ))
+	(rect 1744 64 1992 144)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst15" (rect 8 64 37 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "message[7..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "message[7..0]" (rect 21 27 91 39)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 0 48)
-		(input)
-		(text "seed[7..0]" (rect 0 0 49 12)(font "Arial" ))
-		(text "seed[7..0]" (rect 21 43 70 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "algorithm[1..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "algorithm[1..0]" (rect 21 59 91 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 216 32)
+		(pt 248 32)
 		(output)
-		(text "encrypted[7..0]" (rect 0 0 75 12)(font "Arial" ))
-		(text "encrypted[7..0]" (rect 132 27 207 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 200 96))
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1744 168 1992 248)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst16" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1744 280 1992 360)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst17" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1744 376 1992 456)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst18" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1744 480 1992 560)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst19" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1744 584 1992 664)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst20" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1744 696 1992 776)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst21" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
+	)
+)
+(symbol
+	(rect 1744 -32 1992 48)
+	(text "sevenSegDriver" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst22" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bin_in[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "bin_in[3..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "seven_segment_out[6..0]" (rect 0 0 126 12)(font "Arial" ))
+		(text "seven_segment_out[6..0]" (rect 121 27 247 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
 	)
 )
 (symbol
@@ -384,7 +518,7 @@ agreement for further details.
 	)
 	(parameter
 		"n"
-		"8"
+		"5"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
@@ -395,7 +529,7 @@ agreement for further details.
 (symbol
 	(rect 408 336 576 448)
 	(text "varbitreg" (rect 5 0 48 12)(font "Arial" ))
-	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
+	(text "inst23" (rect 8 96 37 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -426,7 +560,7 @@ agreement for further details.
 	)
 	(parameter
 		"n"
-		"8"
+		"5"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
@@ -434,10 +568,133 @@ agreement for further details.
 	)
 	(annotation_block (parameter)(rect 576 304 760 336))
 )
-(connector
-	(pt 1016 200)
-	(pt 1016 352)
-	(bus)
+(symbol
+	(rect 744 168 968 280)
+	(text "ALU" (rect 5 0 26 12)(font "Arial" ))
+	(text "inst24" (rect 8 96 37 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "message[4..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "message[4..0]" (rect 21 27 91 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "seed[4..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "seed[4..0]" (rect 21 43 70 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "algorithm[1..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "algorithm[1..0]" (rect 21 59 91 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "encrypted[31..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "encrypted[31..0]" (rect 135 27 216 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 96))
+	)
+)
+(symbol
+	(rect 800 440 984 584)
+	(text "Mux" (rect 5 0 25 12)(font "Arial" ))
+	(text "inst29" (rect 8 128 37 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "I0[31..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "I0[31..0]" (rect 21 27 62 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "I1[4..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "I1[4..0]" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "I2[4..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "I2[4..0]" (rect 21 59 56 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "toggle1" (rect 0 0 35 12)(font "Arial" ))
+		(text "toggle1" (rect 21 75 56 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "toggle2" (rect 0 0 35 12)(font "Arial" ))
+		(text "toggle2" (rect 21 91 56 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "F[31..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "F[31..0]" (rect 131 27 169 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "plainText[4..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "plainText[4..0]" (rect 105 43 174 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 3))
+	)
+	(parameter
+		"blank"
+		"00000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 168 128))
+	)
+	(annotation_block (parameter)(rect 984 408 1192 440))
+)
+(symbol
+	(rect 1216 440 1376 520)
+	(text "filter" (rect 5 0 27 12)(font "Arial" ))
+	(text "instFilter" (rect 8 64 50 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "I0[31..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "I0[31..0]" (rect 21 27 62 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "I1[4..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "I1[4..0]" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "F[31..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "F[31..0]" (rect 107 27 145 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
 )
 (connector
 	(pt 1016 352)
@@ -457,11 +714,6 @@ agreement for further details.
 (connector
 	(pt 680 176)
 	(pt 680 200)
-	(bus)
-)
-(connector
-	(pt 1016 200)
-	(pt 960 200)
 	(bus)
 )
 (connector
@@ -511,12 +763,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "system_input[7..0]" (rect 282 472 375 484)(font "Arial" ))
-	(pt 272 488)
-	(pt 800 488)
-	(bus)
-)
-(connector
 	(pt 256 256)
 	(pt 24 256)
 )
@@ -551,38 +797,6 @@ agreement for further details.
 	(pt 192 400)
 )
 (connector
-	(pt 1512 256)
-	(pt 1608 256)
-	(bus)
-)
-(connector
-	(text "F[3..0]" (rect 1210 240 1243 252)(font "Arial" ))
-	(pt 1264 256)
-	(pt 1200 256)
-	(bus)
-)
-(connector
-	(pt 1504 560)
-	(pt 1624 560)
-	(bus)
-)
-(connector
-	(pt 1200 256)
-	(pt 1200 472)
-	(bus)
-)
-(connector
-	(pt 1200 472)
-	(pt 1200 560)
-	(bus)
-)
-(connector
-	(text "F[7..4]" (rect 1210 544 1243 556)(font "Arial" ))
-	(pt 1256 560)
-	(pt 1200 560)
-	(bus)
-)
-(connector
 	(pt 40 512)
 	(pt 40 520)
 	(bus)
@@ -590,12 +804,6 @@ agreement for further details.
 (connector
 	(pt 40 512)
 	(pt 272 512)
-	(bus)
-)
-(connector
-	(text "F[7..0]" (rect 970 456 1003 468)(font "Arial" ))
-	(pt 952 472)
-	(pt 1200 472)
 	(bus)
 )
 (connector
@@ -663,18 +871,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "system_input[15..8]" (rect 272 352 371 364)(font "Arial" ))
-	(pt 408 368)
-	(pt 272 368)
-	(bus)
-)
-(connector
-	(text "system_input[7..0]" (rect 210 160 303 172)(font "Arial" ))
-	(pt 392 176)
-	(pt 200 176)
-	(bus)
-)
-(connector
 	(pt 344 208)
 	(pt 344 192)
 )
@@ -714,7 +910,138 @@ agreement for further details.
 	(pt 368 400)
 	(pt 408 400)
 )
-(junction (pt 1200 472))
+(connector
+	(pt 1016 200)
+	(pt 1016 352)
+	(bus)
+)
+(connector
+	(pt 968 200)
+	(pt 1016 200)
+	(bus)
+)
+(connector
+	(text "F[31..0]" (rect 1386 456 1424 468)(font "Arial" ))
+	(pt 1376 472)
+	(pt 1480 472)
+	(bus)
+)
+(connector
+	(text "F[3..0]" (rect 1650 -16 1683 -4)(font "Arial" ))
+	(pt 1744 0)
+	(pt 1640 0)
+	(bus)
+)
+(connector
+	(text "F[7..4]" (rect 1658 80 1691 92)(font "Arial" ))
+	(pt 1744 96)
+	(pt 1648 96)
+	(bus)
+)
+(connector
+	(text "F[11..8]" (rect 1650 184 1688 196)(font "Arial" ))
+	(pt 1744 200)
+	(pt 1640 200)
+	(bus)
+)
+(connector
+	(text "F[15..12]" (rect 1650 296 1694 308)(font "Arial" ))
+	(pt 1744 312)
+	(pt 1640 312)
+	(bus)
+)
+(connector
+	(text "F[19..16]" (rect 1650 392 1694 404)(font "Arial" ))
+	(pt 1744 408)
+	(pt 1640 408)
+	(bus)
+)
+(connector
+	(text "F[23..20]" (rect 1650 496 1694 508)(font "Arial" ))
+	(pt 1744 512)
+	(pt 1640 512)
+	(bus)
+)
+(connector
+	(text "F[27..24]" (rect 1650 600 1694 612)(font "Arial" ))
+	(pt 1744 616)
+	(pt 1640 616)
+	(bus)
+)
+(connector
+	(text "F[31..28]" (rect 1650 712 1694 724)(font "Arial" ))
+	(pt 1744 728)
+	(pt 1640 728)
+	(bus)
+)
+(connector
+	(text "system_input[4..0]" (rect 210 160 303 172)(font "Arial" ))
+	(pt 392 176)
+	(pt 200 176)
+	(bus)
+)
+(connector
+	(text "system_input[12..8]" (rect 272 352 371 364)(font "Arial" ))
+	(pt 408 368)
+	(pt 272 368)
+	(bus)
+)
+(connector
+	(text "system_input[4..0]" (rect 282 472 375 484)(font "Arial" ))
+	(pt 272 488)
+	(pt 800 488)
+	(bus)
+)
+(connector
+	(pt 984 472)
+	(pt 1216 472)
+	(bus)
+)
+(connector
+	(pt 984 488)
+	(pt 1216 488)
+	(bus)
+)
+(connector
+	(pt 1992 0)
+	(pt 2064 0)
+	(bus)
+)
+(connector
+	(pt 1992 96)
+	(pt 2056 96)
+	(bus)
+)
+(connector
+	(pt 1992 200)
+	(pt 2048 200)
+	(bus)
+)
+(connector
+	(pt 1992 312)
+	(pt 2048 312)
+	(bus)
+)
+(connector
+	(pt 1992 408)
+	(pt 2048 408)
+	(bus)
+)
+(connector
+	(pt 1992 512)
+	(pt 2040 512)
+	(bus)
+)
+(connector
+	(pt 1992 616)
+	(pt 2040 616)
+	(bus)
+)
+(connector
+	(pt 1992 728)
+	(pt 2032 728)
+	(bus)
+)
 (junction (pt 272 488))
 (junction (pt 272 512))
 (junction (pt 256 256))

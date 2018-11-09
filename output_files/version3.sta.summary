@@ -2,16 +2,88 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'system_input[16]'
+Slack : -2.921
+TNS   : -2.921
+
+Type  : Slow 1200mV 85C Model Setup 'pin_name4'
+Slack : -2.141
+TNS   : -3.540
+
+Type  : Slow 1200mV 85C Model Hold 'pin_name4'
+Slack : -0.817
+TNS   : -1.978
+
+Type  : Slow 1200mV 85C Model Hold 'system_input[16]'
+Slack : 1.868
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -23.560
+TNS   : -9.425
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pin_name4'
+Slack : -3.000
+TNS   : -5.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'system_input[16]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Setup 'system_input[16]'
+Slack : -2.478
+TNS   : -2.478
+
+Type  : Slow 1200mV 0C Model Setup 'pin_name4'
+Slack : -2.174
+TNS   : -3.864
+
+Type  : Slow 1200mV 0C Model Hold 'pin_name4'
+Slack : -0.712
+TNS   : -1.727
+
+Type  : Slow 1200mV 0C Model Hold 'system_input[16]'
+Slack : 1.617
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -23.560
+TNS   : -9.425
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pin_name4'
+Slack : -3.000
+TNS   : -4.912
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'system_input[16]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'system_input[16]'
+Slack : -1.202
+TNS   : -1.202
+
+Type  : Fast 1200mV 0C Model Setup 'pin_name4'
+Slack : -0.330
+TNS   : -0.330
+
+Type  : Fast 1200mV 0C Model Hold 'pin_name4'
+Slack : -0.568
+TNS   : -1.613
+
+Type  : Fast 1200mV 0C Model Hold 'system_input[16]'
+Slack : 1.151
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -19.968
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pin_name4'
+Slack : -3.000
+TNS   : -6.227
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'system_input[16]'
+Slack : -3.000
+TNS   : -3.073
 
 ------------------------------------------------------------

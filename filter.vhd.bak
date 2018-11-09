@@ -1,0 +1,44 @@
+-- Multiplexer for selecting to display the encryption, original message or seed. 
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity filter is
+
+generic(
+	 blank : std_logic_vector(7 downto 0) := "00000000"
+);
+	port
+	(
+		I0		: in std_logic_vector(63 downto 0); -- Enrypted message space
+		I1		: in std_logic_vector(5 downto 0); -- seed or original message space
+		F 		: out std_logic_vector(63 downto 0) -- output message. Will have added padding if a plaintext is received
+	);
+end filter;
+
+architecture arch of filter is
+
+signal encrypted : std_logic_vector(63 downto 0);
+signal plainText : std_logic_vector(5 downto 0);
+signal padding : std_logic_vector(57 downto 0) := '0';
+
+begin 
+	process(I1, I0)
+
+	begin
+		encrypted <= I0;
+		plainText <= I1;
+	 
+		if (encrypted /= (other => '0')) and (key2 = (other => '0')) then
+		
+			F <=  encrypted;  
+
+		elsif (encrypted = (other => '0')) and (key2 /= (other => '0'))then
+	
+			F <= plainText & padding;
+			
+
+		end if;
+	end process;
+	
+end architecture arch;
