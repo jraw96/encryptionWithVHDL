@@ -27,8 +27,8 @@ agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "I0[31..0]" (rect 0 0 30 12)(font "Arial" ))
-		(text "I0[31..0]" (rect 21 27 51 39)(font "Arial" ))
+		(text "I0[4..0]" (rect 0 0 28 12)(font "Arial" ))
+		(text "I0[4..0]" (rect 21 27 49 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port

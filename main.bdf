@@ -577,9 +577,38 @@ agreement for further details.
 	(annotation_block (parameter)(rect 576 304 760 336))
 )
 (symbol
+	(rect 1216 440 1376 520)
+	(text "filter" (rect 5 0 27 12)(font "Arial" ))
+	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "I0[31..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "I0[31..0]" (rect 21 27 62 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "I1[4..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "I1[4..0]" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "F[31..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "F[31..0]" (rect 107 27 145 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+)
+(symbol
 	(rect 744 168 968 280)
 	(text "ALU" (rect 5 0 26 12)(font "Arial" ))
-	(text "inst24" (rect 8 96 37 108)(font "Arial" ))
+	(text "inst4" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -604,8 +633,8 @@ agreement for further details.
 	(port
 		(pt 224 32)
 		(output)
-		(text "encrypted[31..0]" (rect 0 0 81 12)(font "Arial" ))
-		(text "encrypted[31..0]" (rect 135 27 216 39)(font "Arial" ))
+		(text "encrypted[4..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "encrypted[4..0]" (rect 140 27 215 39)(font "Arial" ))
 		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(drawing
@@ -615,12 +644,12 @@ agreement for further details.
 (symbol
 	(rect 800 440 984 584)
 	(text "newMux" (rect 5 0 43 12)(font "Arial" ))
-	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst6" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "I0[31..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "I0[31..0]" (rect 21 27 62 39)(font "Arial" ))
+		(text "I0[4..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "I0[4..0]" (rect 21 27 56 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -674,35 +703,6 @@ agreement for further details.
 		(rectangle (rect 16 16 168 128))
 	)
 	(annotation_block (parameter)(rect 984 408 1192 440))
-)
-(symbol
-	(rect 1216 440 1376 520)
-	(text "filter" (rect 5 0 27 12)(font "Arial" ))
-	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "I0[31..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "I0[31..0]" (rect 21 27 62 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "I1[4..0]" (rect 0 0 35 12)(font "Arial" ))
-		(text "I1[4..0]" (rect 21 43 56 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "F[31..0]" (rect 0 0 38 12)(font "Arial" ))
-		(text "F[31..0]" (rect 107 27 145 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
 )
 (connector
 	(pt 1016 352)

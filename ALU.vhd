@@ -11,7 +11,7 @@ entity ALU is
 port(message : IN std_logic_vector(4 downto 0);
 	  seed : IN std_logic_vector(4 downto 0);
 			algorithm : IN std_logic_vector(1 downto 0);
-			encrypted : OUT std_logic_vector(31 downto 0) -- Output is a 32 bit string. The length is 2^n - 1, where n = 5
+			encrypted : OUT std_logic_vector(4 downto 0) -- Output is a 32 bit string. The length is 2^n - 1, where n = 5
 	);
 end ALU;
 
@@ -27,17 +27,17 @@ begin
 		case algorithm is
 			when "00" => -- Perform the LSFR
 			
-				feedback <= not(seed(4)  xor seed(3)  xor seed(2)  xor seed(1)  xor seed(0));  
-				encrypted <= encryptedMessage(30 downto 0) & feedback;
+				feedback <=  seed(4) XOR seed(3) XOR seed(2) XOR seed(1) XOR seed(0);  
+				encrypted <= seed(3 downto 0) & feedback;
 				
 			when "01"=> -- Perform the second guy
 				encrypted <= (others => '0');
 				
 			when "10"=> -- Perform the third guy
-				encrypted <= "10101010101010101010101010101010";
+				encrypted <= "10101";
 			
 			when "11" => -- Display all 1's
-				encrypted <= "11111111111111111111111111111111";
+				encrypted <= "11111";
 				
 			end case;
 		end process;

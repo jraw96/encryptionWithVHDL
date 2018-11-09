@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 224 32)
 		(output)
-		(text "encrypted[31..0]" (rect 0 0 63 12)(font "Arial" ))
-		(text "encrypted[31..0]" (rect 140 27 203 39)(font "Arial" ))
+		(text "encrypted[4..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "encrypted[4..0]" (rect 142 27 203 39)(font "Arial" ))
 		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(drawing

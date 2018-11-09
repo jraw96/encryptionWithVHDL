@@ -11,7 +11,7 @@ generic(
 
 	port
 	(
-		I0		: in std_logic_vector(31 downto 0); -- Display the encryption
+		I0		: in std_logic_vector(4 downto 0); -- Display the encryption
 		I1		: in std_logic_vector(4 downto 0); -- Display the oiginal message
 		I2		: in std_logic_vector(4 downto 0); -- Display the seed value
 		toggle1 : in std_logic; -- toggle between the original message and encrypted message
@@ -25,7 +25,7 @@ architecture arch of newMux is
 
 signal key1 : std_logic; 
 signal key2 : std_logic; 
-signal encrypted : std_logic_vector(31 downto 0);
+signal encrypted : std_logic_vector(4 downto 0);
 signal original : std_logic_vector(4 downto 0);
 signal seed : std_logic_vector(4 downto 0);
 
@@ -40,7 +40,7 @@ begin
 		seed <= I2;
 	 
 		if (key1 = '0') and (key2 = '0') then
-			F <=  encrypted;  
+			F <=  "000000000000000000000000000" & encrypted;  
 			plainText <= (others => '0');
 		elsif (key1 = '1') and (key2 = '0') then
 			plainText <=  original;  
