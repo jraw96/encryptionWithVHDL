@@ -1,5 +1,5 @@
 Analysis & Synthesis report for version3
-Fri Nov 09 17:35:39 2018
+Wed Nov 21 16:13:57 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -14,14 +14,15 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: newMux:inst6
- 12. Parameter Settings for User Entity Instance: varbitreg:inst
- 13. Parameter Settings for User Entity Instance: varbitreg:inst23
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: newMux:inst6
+ 13. Parameter Settings for User Entity Instance: varbitreg:Message
+ 14. Parameter Settings for User Entity Instance: varbitreg:Seed
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -48,16 +49,16 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 09 17:35:39 2018      ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 21 16:13:57 2018      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; version3                                   ;
 ; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 45                                         ;
-;     Total combinational functions  ; 35                                         ;
-;     Dedicated logic registers      ; 10                                         ;
-; Total registers                    ; 10                                         ;
-; Total pins                         ; 78                                         ;
+; Total logic elements               ; 92                                         ;
+;     Total combinational functions  ; 79                                         ;
+;     Dedicated logic registers      ; 42                                         ;
+; Total registers                    ; 42                                         ;
+; Total pins                         ; 82                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -163,63 +164,67 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                        ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+---------+
-; varbitreg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/varbitreg.vhd      ;         ;
-; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Azorac/Desktop/version3/main.bdf           ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/ALU.vhd            ;         ;
-; sevenSegDriver.vhd               ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/sevenSegDriver.vhd ;         ;
-; filter.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/filter.vhd         ;         ;
-; newMux.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/newMux.vhd         ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+; varbitreg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/varbitreg.vhd           ;         ;
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Azorac/Desktop/version3/main.bdf                ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/ALU.vhd                 ;         ;
+; sevenSegDriver.vhd               ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/sevenSegDriver.vhd      ;         ;
+; filter.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/filter.vhd              ;         ;
+; newMux.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/newMux.vhd              ;         ;
+; customClock.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/customClock.vhd         ;         ;
+; cipherBlockRegister.vhd          ; yes             ; User VHDL File                     ; C:/Users/Azorac/Desktop/version3/cipherBlockRegister.vhd ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 45        ;
-;                                             ;           ;
-; Total combinational functions               ; 35        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 25        ;
-;     -- 3 input functions                    ; 7         ;
-;     -- <=2 input functions                  ; 3         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 35        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 10        ;
-;     -- Dedicated logic registers            ; 10        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 78        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 10        ;
-; Total fan-out                               ; 246       ;
-; Average fan-out                             ; 1.22      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 92              ;
+;                                             ;                 ;
+; Total combinational functions               ; 79              ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 27              ;
+;     -- 3 input functions                    ; 12              ;
+;     -- <=2 input functions                  ; 40              ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 55              ;
+;     -- arithmetic mode                      ; 24              ;
+;                                             ;                 ;
+; Total registers                             ; 42              ;
+;     -- Dedicated logic registers            ; 42              ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 82              ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; pin_name2~input ;
+; Maximum fan-out                             ; 26              ;
+; Total fan-out                               ; 445             ;
+; Average fan-out                             ; 1.56            ;
++---------------------------------------------+-----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                 ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; |main                      ; 35 (0)            ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 78   ; 0            ; |main                       ; work         ;
-;    |ALU:inst4|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ALU:inst4             ; work         ;
-;    |filter:inst5|          ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|filter:inst5          ; work         ;
-;    |newMux:inst6|          ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|newMux:inst6          ; work         ;
-;    |sevenSegDriver:inst22| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst22 ; work         ;
-;    |varbitreg:inst23|      ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:inst23      ; work         ;
-;    |varbitreg:inst|        ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:inst        ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
+; |main                          ; 79 (0)            ; 42 (0)       ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |main                           ; work         ;
+;    |ALU:inst4|                 ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ALU:inst4                 ; work         ;
+;    |cipherBlockRegister:inst8| ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|cipherBlockRegister:inst8 ; work         ;
+;    |customClock:inst|          ; 47 (47)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|customClock:inst          ; work         ;
+;    |filter:inst5|              ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|filter:inst5              ; work         ;
+;    |newMux:inst6|              ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|newMux:inst6              ; work         ;
+;    |sevenSegDriver:inst22|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst22     ; work         ;
+;    |varbitreg:Message|         ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:Message         ; work         ;
+;    |varbitreg:Seed|            ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:Seed            ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -234,14 +239,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; filter:inst5|F[3]                                   ; filter:inst5|F[31]  ; yes                    ;
 ; filter:inst5|F[4]                                   ; filter:inst5|F[31]  ; yes                    ;
 ; newMux:inst6|plainText[0]                           ; newMux:inst6|F[31]  ; yes                    ;
-; ALU:inst4|feedback                                  ; ALU:inst4|Mux0      ; yes                    ;
 ; newMux:inst6|plainText[1]                           ; newMux:inst6|F[31]  ; yes                    ;
 ; newMux:inst6|plainText[2]                           ; newMux:inst6|F[31]  ; yes                    ;
 ; newMux:inst6|plainText[3]                           ; newMux:inst6|F[31]  ; yes                    ;
 ; newMux:inst6|plainText[4]                           ; newMux:inst6|F[31]  ; yes                    ;
-; Number of user-specified and inferred latches = 11  ;                     ;                        ;
+; Number of user-specified and inferred latches = 10  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++---------------------------------------+--------------------------------------------+
+; Register name                         ; Reason for Removal                         ;
++---------------------------------------+--------------------------------------------+
+; ALU:inst4|encrypted[3]                ; Merged with ALU:inst4|encrypted[1]         ;
+; ALU:inst4|encrypted[4]                ; Merged with ALU:inst4|encrypted[0]         ;
+; cipherBlockRegister:inst8|Q[4]        ; Merged with cipherBlockRegister:inst8|Q[0] ;
+; cipherBlockRegister:inst8|Q[3]        ; Merged with cipherBlockRegister:inst8|Q[1] ;
+; Total Number of Removed Registers = 4 ;                                            ;
++---------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -249,12 +266,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
+; Total registers                              ; 42    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 31    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -265,7 +282,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |main|newMux:inst6|plainText[3] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |main|newMux:inst6|F[3]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -279,8 +295,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: varbitreg:Message ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n              ; 5     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: varbitreg:inst ;
+; Parameter Settings for User Entity Instance: varbitreg:Seed ;
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
@@ -289,34 +315,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: varbitreg:inst23 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; n              ; 5     ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 78                          ;
-; cycloneiii_ff         ; 10                          ;
+; boundary_port         ; 82                          ;
+; cycloneiii_ff         ; 42                          ;
+;     CLR               ; 25                          ;
 ;     ENA               ; 10                          ;
-; cycloneiii_lcell_comb ; 38                          ;
-;     normal            ; 38                          ;
+;     ENA CLR           ; 6                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 82                          ;
+;     arith             ; 24                          ;
+;         2 data inputs ; 24                          ;
+;     normal            ; 58                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 25                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 27                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.80                        ;
+; Average LUT depth     ; 3.29                        ;
 +-----------------------+-----------------------------+
 
 
@@ -335,7 +356,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Fri Nov 09 17:35:37 2018
+    Info: Processing started: Wed Nov 21 16:13:54 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off version3 -c version3
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file varbitreg.vhd
@@ -359,6 +380,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file filter.
 Info (12021): Found 2 design units, including 1 entities, in source file newmux.vhd
     Info (12022): Found design unit 1: newMux-arch
     Info (12023): Found entity 1: newMux
+Info (12021): Found 2 design units, including 1 entities, in source file customclock.vhd
+    Info (12022): Found design unit 1: customClock-clock_arch
+    Info (12023): Found entity 1: customClock
+Info (12021): Found 2 design units, including 1 entities, in source file cipherblockregister.vhd
+    Info (12022): Found design unit 1: cipherBlockRegister-Behaveral
+    Info (12023): Found entity 1: cipherBlockRegister
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "sevenSegDriver" for hierarchy "sevenSegDriver:inst22"
 Info (12128): Elaborating entity "filter" for hierarchy "filter:inst5"
@@ -449,12 +476,13 @@ Info (10041): Inferred latch for "F[29]" at newMux.vhd(33)
 Info (10041): Inferred latch for "F[30]" at newMux.vhd(33)
 Info (10041): Inferred latch for "F[31]" at newMux.vhd(33)
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst4"
-Warning (10492): VHDL Process Statement warning at ALU.vhd(30): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(31): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(31): signal "feedback" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "feedback", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "feedback" at ALU.vhd(25)
-Info (12128): Elaborating entity "varbitreg" for hierarchy "varbitreg:inst"
+Warning (10492): VHDL Process Statement warning at ALU.vhd(36): signal "clear" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "customClock" for hierarchy "customClock:inst"
+Info (12128): Elaborating entity "cipherBlockRegister" for hierarchy "cipherBlockRegister:inst8"
+Warning (10492): VHDL Process Statement warning at cipherBlockRegister.vhd(26): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at cipherBlockRegister.vhd(29): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "varbitreg" for hierarchy "varbitreg:Message"
 Warning (14026): LATCH primitive "newMux:inst6|F[3]" is permanently enabled
 Warning (14026): LATCH primitive "newMux:inst6|F[0]" is permanently enabled
 Warning (14026): LATCH primitive "newMux:inst6|F[1]" is permanently enabled
@@ -534,21 +562,23 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "system_input[17]"
+    Warning (15610): No output dependent on input pin "system_input[16]"
     Warning (15610): No output dependent on input pin "system_input[15]"
     Warning (15610): No output dependent on input pin "system_input[14]"
     Warning (15610): No output dependent on input pin "system_input[13]"
     Warning (15610): No output dependent on input pin "system_input[7]"
     Warning (15610): No output dependent on input pin "system_input[6]"
     Warning (15610): No output dependent on input pin "system_input[5]"
-Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 22 input pins
+Info (21057): Implemented 175 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
     Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 45 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 4743 megabytes
-    Info: Processing ended: Fri Nov 09 17:35:39 2018
-    Info: Elapsed time: 00:00:02
+    Info (21061): Implemented 93 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 4739 megabytes
+    Info: Processing ended: Wed Nov 21 16:13:57 2018
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
