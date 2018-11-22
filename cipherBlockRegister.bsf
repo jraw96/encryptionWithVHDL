@@ -48,15 +48,15 @@ agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "previousBlock[4..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "previousBlock[4..0]" (rect 21 75 97 87)(font "Arial" ))
+		(text "previousBlock[15..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "previousBlock[15..0]" (rect 21 75 100 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
 		(pt 208 32)
 		(output)
-		(text "Q[4..0]" (rect 0 0 28 12)(font "Arial" ))
-		(text "Q[4..0]" (rect 159 27 187 39)(font "Arial" ))
+		(text "Q[15..0]" (rect 0 0 30 12)(font "Arial" ))
+		(text "Q[15..0]" (rect 157 27 187 39)(font "Arial" ))
 		(line (pt 208 32)(pt 192 32)(line_width 3))
 	)
 	(drawing

@@ -1,0 +1,26 @@
+-- Binary to Hex converter
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity bin2hex is
+generic( 
+	n : INTEGER := 5 -- Set the the bit register to 5 
+	);
+	port
+	(
+		bin : in std_logic_vector(31 downto 0);
+		
+		
+	);
+end bin2hex;
+
+architecture arch of bin2hex is
+begin 
+	process(en, clk) is 
+	begin 
+		if(en = '0' and rising_edge(clk)) then
+			Q <= D;
+		end if;
+	end process; 
+end arch;

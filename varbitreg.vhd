@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 
 entity varbitreg is
 generic( 
-	n : INTEGER := 5 -- Set the the bit register to 5 
+	n : INTEGER := 16 -- Set the the bit register to 16. It will contains four hexadecimanl values
 	);
 	port
 	(
