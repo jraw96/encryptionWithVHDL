@@ -3,15 +3,15 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.653
-TNS   : -85.565
+Slack : -3.658
+TNS   : -72.725
 
 Type  : Slow 1200mV 85C Model Setup 'customClock:clock|togglebit'
-Slack : -1.510
-TNS   : -13.858
+Slack : -1.759
+TNS   : -37.975
 
 Type  : Slow 1200mV 85C Model Hold 'customClock:clock|togglebit'
-Slack : 0.263
+Slack : 0.196
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
@@ -28,22 +28,22 @@ TNS   : -3.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'customClock:clock|togglebit'
 Slack : -1.285
-TNS   : -41.120
+TNS   : -82.240
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.226
-TNS   : -73.089
+Slack : -3.265
+TNS   : -61.379
 
 Type  : Slow 1200mV 0C Model Setup 'customClock:clock|togglebit'
-Slack : -1.250
-TNS   : -10.493
+Slack : -1.542
+TNS   : -30.837
 
 Type  : Slow 1200mV 0C Model Hold 'customClock:clock|togglebit'
-Slack : 0.214
+Slack : 0.206
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.585
+Slack : 0.586
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -56,34 +56,34 @@ TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'customClock:clock|togglebit'
 Slack : -1.285
-TNS   : -41.120
+TNS   : -82.240
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.342
-TNS   : -33.273
+Slack : -1.345
+TNS   : -24.771
 
 Type  : Fast 1200mV 0C Model Setup 'customClock:clock|togglebit'
-Slack : -0.230
-TNS   : -1.813
+Slack : -0.314
+TNS   : -4.996
 
 Type  : Fast 1200mV 0C Model Hold 'customClock:clock|togglebit'
-Slack : 0.058
+Slack : 0.093
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.092
+Slack : 0.189
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -47.599
+TNS   : -47.553
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Set_Key'
 Slack : -3.000
-TNS   : -3.966
+TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'customClock:clock|togglebit'
 Slack : -1.000
-TNS   : -32.000
+TNS   : -64.000
 
 ------------------------------------------------------------

@@ -165,11 +165,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC12      :        :                   :         : 3         :                
 GND                          : AC13      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC14      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC15      :        :                   :         : 4         :                
+Set_Key                      : AC15      : input  : 2.5 V             :         : 4         : N              
 GND                          : AC16      : gnd    :                   :         :           :                
 digit7[6]                    : AC17      : output : 2.5 V             :         : 4         : Y              
 diit6[1]                     : AC18      : output : 2.5 V             :         : 4         : Y              
-Switches[9]                  : AC19      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC19      :        :                   :         : 4         :                
 GND                          : AC20      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC21      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4         :                
@@ -193,11 +193,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3         :                
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD14      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD15      :        :                   :         : 4         :                
+Switches[0]                  : AD15      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
 digit8[0]                    : AD17      : output : 2.5 V             :         : 4         : Y              
 diit6[0]                     : AD18      : output : 2.5 V             :         : 4         : Y              
-Switches[2]                  : AD19      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4         :                
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD22      :        :                   :         : 4         :                
@@ -221,17 +221,17 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE13      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE14      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE15      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE16      :        :                   :         : 4         :                
+Switches[5]                  : AE15      : input  : 2.5 V             :         : 4         : N              
+Switches[2]                  : AE16      : input  : 2.5 V             :         : 4         : N              
 digit8[1]                    : AE17      : output : 2.5 V             :         : 4         : Y              
 digit5[6]                    : AE18      : output : 2.5 V             :         : 4         : Y              
 digit5[4]                    : AE19      : output : 2.5 V             :         : 4         : Y              
-Switches[14]                 : AE20      : input  : 2.5 V             :         : 4         : N              
-Switches[15]                 : AE21      : input  : 2.5 V             :         : 4         : N              
+Switches[7]                  : AE20      : input  : 2.5 V             :         : 4         : N              
+Switches[8]                  : AE21      : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE24      :        :                   :         : 4         :                
-Switches[8]                  : AE25      : input  : 2.5 V             :         : 4         : N              
+Switches[15]                 : AE25      : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE26      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5         :                
@@ -249,18 +249,18 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF12      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF14      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF15      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF16      :        :                   :         : 4         :                
+Switches[3]                  : AF15      : input  : 2.5 V             :         : 4         : N              
+Switches[1]                  : AF16      : input  : 2.5 V             :         : 4         : N              
 digit8[4]                    : AF17      : output : 2.5 V             :         : 4         : Y              
 diit6[5]                     : AF18      : output : 2.5 V             :         : 4         : Y              
 digit5[5]                    : AF19      : output : 2.5 V             :         : 4         : Y              
-Switches[12]                 : AF20      : input  : 2.5 V             :         : 4         : N              
-Switches[1]                  : AF21      : input  : 2.5 V             :         : 4         : N              
-Switches[10]                 : AF22      : input  : 2.5 V             :         : 4         : N              
+Switches[13]                 : AF20      : input  : 2.5 V             :         : 4         : N              
+Switches[11]                 : AF21      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF22      :        :                   :         : 4         :                
 digit4[5]                    : AF23      : output : 2.5 V             :         : 4         : Y              
-Set_Key                      : AF24      : input  : 2.5 V             :         : 4         : N              
-Switches[6]                  : AF25      : input  : 2.5 V             :         : 4         : N              
-Switches[7]                  : AF26      : input  : 2.5 V             :         : 4         : N              
+Switches[10]                 : AF24      : input  : 2.5 V             :         : 4         : N              
+Switches[14]                 : AF25      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF27      :        :                   :         : 5         :                
 GND                          : AF28      : gnd    :                   :         :           :                
 VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
@@ -284,10 +284,10 @@ digit8[5]                    : AG18      : output : 2.5 V             :         
 diit6[4]                     : AG19      : output : 2.5 V             :         : 4         : Y              
 GND                          : AG20      : gnd    :                   :         :           :                
 digit5[2]                    : AG21      : output : 2.5 V             :         : 4         : Y              
-Switches[13]                 : AG22      : input  : 2.5 V             :         : 4         : N              
-Switches[11]                 : AG23      : input  : 2.5 V             :         : 4         : N              
+Switches[4]                  : AG22      : input  : 2.5 V             :         : 4         : N              
+Switches[12]                 : AG23      : input  : 2.5 V             :         : 4         : N              
 GND                          : AG24      : gnd    :                   :         :           :                
-Switches[3]                  : AG25      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4         :                
 GND                          : AG27      : gnd    :                   :         :           :                
 VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
@@ -311,10 +311,10 @@ diit6[6]                     : AH18      : output : 2.5 V             :         
 diit6[3]                     : AH19      : output : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
 digit5[3]                    : AH21      : output : 2.5 V             :         : 4         : Y              
-Switches[4]                  : AH22      : input  : 2.5 V             :         : 4         : N              
-Switches[0]                  : AH23      : input  : 2.5 V             :         : 4         : N              
+Switches[6]                  : AH22      : input  : 2.5 V             :         : 4         : N              
+Switches[9]                  : AH23      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
-Switches[5]                  : AH25      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4         :                
 VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
 VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                

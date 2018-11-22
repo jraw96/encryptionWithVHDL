@@ -1,5 +1,5 @@
 Fitter report for version3
-Thu Nov 22 13:30:41 2018
+Thu Nov 22 16:39:17 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -70,17 +70,17 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 22 13:30:41 2018      ;
+; Fitter Status                      ; Successful - Thu Nov 22 16:39:17 2018      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; version3                                   ;
 ; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 199 / 114,480 ( < 1 % )                    ;
-;     Total combinational functions  ; 186 / 114,480 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 74 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 74                                         ;
+; Total logic elements               ; 219 / 114,480 ( < 1 % )                    ;
+;     Total combinational functions  ; 188 / 114,480 ( < 1 % )                    ;
+;     Dedicated logic registers      ; 106 / 114,480 ( < 1 % )                    ;
+; Total registers                    ; 106                                        ;
 ; Total pins                         ; 78 / 529 ( 15 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
@@ -258,8 +258,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 430 ) ; 0.00 % ( 0 / 430 )         ; 0.00 % ( 0 / 430 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 430 ) ; 0.00 % ( 0 / 430 )         ; 0.00 % ( 0 / 430 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 464 ) ; 0.00 % ( 0 / 464 )         ; 0.00 % ( 0 / 464 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 464 ) ; 0.00 % ( 0 / 464 )         ; 0.00 % ( 0 / 464 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -282,7 +282,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 420 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 454 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -298,26 +298,26 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 199 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 125                     ;
-;     -- Register only                        ; 13                      ;
-;     -- Combinational with a register        ; 61                      ;
+; Total logic elements                        ; 219 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 113                     ;
+;     -- Register only                        ; 31                      ;
+;     -- Combinational with a register        ; 75                      ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 93                      ;
-;     -- 3 input functions                    ; 54                      ;
+;     -- 4 input functions                    ; 86                      ;
+;     -- 3 input functions                    ; 63                      ;
 ;     -- <=2 input functions                  ; 39                      ;
-;     -- Register only                        ; 13                      ;
+;     -- Register only                        ; 31                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 162                     ;
+;     -- normal mode                          ; 164                     ;
 ;     -- arithmetic mode                      ; 24                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 74 / 117,053 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 74 / 114,480 ( < 1 % )  ;
+; Total registers*                            ; 106 / 117,053 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 106 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 16 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 17 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 78 / 529 ( 15 % )       ;
 ;     -- Clock pins                           ; 2 / 7 ( 29 % )          ;
@@ -334,12 +334,12 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.2%      ;
-; Peak interconnect usage (total/H/V)         ; 2.8% / 2.9% / 2.8%      ;
-; Maximum fan-out                             ; 62                      ;
-; Highest non-global fan-out                  ; 62                      ;
-; Total fan-out                               ; 1019                    ;
-; Average fan-out                             ; 2.31                    ;
+; Average interconnect usage (total/H/V)      ; 0.1% / 0.2% / 0.1%      ;
+; Peak interconnect usage (total/H/V)         ; 1.7% / 2.2% / 1.1%      ;
+; Maximum fan-out                             ; 64                      ;
+; Highest non-global fan-out                  ; 60                      ;
+; Total fan-out                               ; 1132                    ;
+; Average fan-out                             ; 2.29                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -352,26 +352,26 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 199 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 125                    ; 0                              ;
-;     -- Register only                        ; 13                     ; 0                              ;
-;     -- Combinational with a register        ; 61                     ; 0                              ;
+; Total logic elements                        ; 219 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 113                    ; 0                              ;
+;     -- Register only                        ; 31                     ; 0                              ;
+;     -- Combinational with a register        ; 75                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 93                     ; 0                              ;
-;     -- 3 input functions                    ; 54                     ; 0                              ;
+;     -- 4 input functions                    ; 86                     ; 0                              ;
+;     -- 3 input functions                    ; 63                     ; 0                              ;
 ;     -- <=2 input functions                  ; 39                     ; 0                              ;
-;     -- Register only                        ; 13                     ; 0                              ;
+;     -- Register only                        ; 31                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 162                    ; 0                              ;
+;     -- normal mode                          ; 164                    ; 0                              ;
 ;     -- arithmetic mode                      ; 24                     ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 74                     ; 0                              ;
-;     -- Dedicated logic registers            ; 74 / 114480 ( < 1 % )  ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 106                    ; 0                              ;
+;     -- Dedicated logic registers            ; 106 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 16 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 17 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 78                     ; 0                              ;
@@ -387,8 +387,8 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1014                   ; 5                              ;
-;     -- Registered Connections               ; 244                    ; 0                              ;
+;     -- Total Connections                    ; 1127                   ; 5                              ;
+;     -- Registered Connections               ; 292                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -420,27 +420,27 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; Enable       ; M23   ; 6        ; 115          ; 40           ; 7            ; 33                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; Reset        ; M21   ; 6        ; 115          ; 53           ; 14           ; 58                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; Set_Key      ; AF24  ; 4        ; 83           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[0]  ; AH23  ; 4        ; 81           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[10] ; AF22  ; 4        ; 96           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[11] ; AG23  ; 4        ; 81           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[12] ; AF20  ; 4        ; 85           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[13] ; AG22  ; 4        ; 79           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[14] ; AE20  ; 4        ; 85           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[15] ; AE21  ; 4        ; 85           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[16] ; AH15  ; 4        ; 58           ; 0            ; 0            ; 61                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[17] ; AG15  ; 4        ; 58           ; 0            ; 7            ; 62                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[1]  ; AF21  ; 4        ; 87           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[2]  ; AD19  ; 4        ; 94           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[3]  ; AG25  ; 4        ; 91           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[4]  ; AH22  ; 4        ; 79           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[5]  ; AH25  ; 4        ; 91           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[6]  ; AF25  ; 4        ; 83           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[7]  ; AF26  ; 4        ; 89           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[8]  ; AE25  ; 4        ; 89           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Switches[9]  ; AC19  ; 4        ; 94           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Enable       ; M23   ; 6        ; 115          ; 40           ; 7            ; 35                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; Reset        ; M21   ; 6        ; 115          ; 53           ; 14           ; 60                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; Set_Key      ; AC15  ; 4        ; 60           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[0]  ; AD15  ; 4        ; 60           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[10] ; AF24  ; 4        ; 83           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[11] ; AF21  ; 4        ; 87           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[12] ; AG23  ; 4        ; 81           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[13] ; AF20  ; 4        ; 85           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[14] ; AF25  ; 4        ; 83           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[15] ; AE25  ; 4        ; 89           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[16] ; AH15  ; 4        ; 58           ; 0            ; 0            ; 46                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[17] ; AG15  ; 4        ; 58           ; 0            ; 7            ; 48                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[1]  ; AF16  ; 4        ; 65           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[2]  ; AE16  ; 4        ; 65           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[3]  ; AF15  ; 4        ; 60           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[4]  ; AG22  ; 4        ; 79           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[5]  ; AE15  ; 4        ; 60           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[6]  ; AH22  ; 4        ; 79           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[7]  ; AE20  ; 4        ; 85           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[8]  ; AE21  ; 4        ; 85           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Switches[9]  ; AH23  ; 4        ; 81           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; clk          ; Y2    ; 2        ; 0            ; 36           ; 14           ; 42                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
@@ -647,11 +647,11 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ; AC12     ; 179        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC13     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC14     ; 195        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AC15     ; 203        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AC15     ; 203        ; 4        ; Set_Key                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC16     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC17     ; 221        ; 4        ; digit7[6]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AC18     ; 240        ; 4        ; diit6[1]                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AC19     ; 247        ; 4        ; Switches[9]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC19     ; 247        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC20     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC21     ; 258        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC22     ; 267        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -675,11 +675,11 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ; AD12     ; 182        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD14     ; 196        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD15     ; 204        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AD15     ; 204        ; 4        ; Switches[0]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD17     ; 222        ; 4        ; digit8[0]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD18     ; 237        ; 4        ; diit6[0]                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AD19     ; 248        ; 4        ; Switches[2]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD19     ; 248        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD21     ; 259        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD22     ; 268        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -703,17 +703,17 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ; AE12     ; 169        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE13     ; 177        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE14     ; 183        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE15     ; 205        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE16     ; 209        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE15     ; 205        ; 4        ; Switches[5]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE16     ; 209        ; 4        ; Switches[2]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE17     ; 215        ; 4        ; digit8[1]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE18     ; 225        ; 4        ; digit5[6]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE19     ; 231        ; 4        ; digit5[4]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AE20     ; 235        ; 4        ; Switches[14]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE21     ; 238        ; 4        ; Switches[15]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE20     ; 235        ; 4        ; Switches[7]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE21     ; 238        ; 4        ; Switches[8]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE22     ; 251        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE23     ; 261        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE24     ; 256        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE25     ; 243        ; 4        ; Switches[8]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE25     ; 243        ; 4        ; Switches[15]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE26     ; 278        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE27     ; 284        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE28     ; 283        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -731,18 +731,18 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ; AF12     ; 170        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF13     ; 178        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF14     ; 184        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF15     ; 206        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF16     ; 210        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF15     ; 206        ; 4        ; Switches[3]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF16     ; 210        ; 4        ; Switches[1]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF17     ; 216        ; 4        ; digit8[4]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF18     ; 226        ; 4        ; diit6[5]                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF19     ; 232        ; 4        ; digit5[5]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AF20     ; 236        ; 4        ; Switches[12]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF21     ; 239        ; 4        ; Switches[1]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF22     ; 252        ; 4        ; Switches[10]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF20     ; 236        ; 4        ; Switches[13]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF21     ; 239        ; 4        ; Switches[11]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF22     ; 252        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF23     ; 262        ; 4        ; digit4[5]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AF24     ; 233        ; 4        ; Set_Key                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF25     ; 234        ; 4        ; Switches[6]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF26     ; 244        ; 4        ; Switches[7]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF24     ; 233        ; 4        ; Switches[10]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF25     ; 234        ; 4        ; Switches[14]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF26     ; 244        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF27     ; 277        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AF28     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG1      ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -766,10 +766,10 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ; AG19     ; 219        ; 4        ; diit6[4]                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AG20     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG21     ; 223        ; 4        ; digit5[2]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AG22     ; 227        ; 4        ; Switches[13]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG23     ; 229        ; 4        ; Switches[11]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG22     ; 227        ; 4        ; Switches[4]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG23     ; 229        ; 4        ; Switches[12]                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AG24     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG25     ; 245        ; 4        ; Switches[3]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG25     ; 245        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG26     ; 270        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG27     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG28     ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -793,10 +793,10 @@ The pin-out file can be found in C:/Users/Azorac/Desktop/version3/output_files/v
 ; AH19     ; 220        ; 4        ; diit6[3]                                                  ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AH20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH21     ; 224        ; 4        ; digit5[3]                                                 ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AH22     ; 228        ; 4        ; Switches[4]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AH23     ; 230        ; 4        ; Switches[0]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH22     ; 228        ; 4        ; Switches[6]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH23     ; 230        ; 4        ; Switches[9]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH24     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AH25     ; 246        ; 4        ; Switches[5]                                               ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH25     ; 246        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH26     ; 271        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH27     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; B1       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -1340,11 +1340,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                    ; Library Name ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------+--------------+
-; |main                                 ; 199 (0)     ; 74 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 78   ; 0            ; 125 (0)      ; 13 (0)            ; 61 (0)           ; |main                                  ; work         ;
-;    |ALU:algorithm_logic_unit|         ; 22 (22)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 20 (20)          ; |main|ALU:algorithm_logic_unit         ; work         ;
-;    |cipherBlockRegister:block-cipher| ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 12 (12)           ; 4 (4)            ; |main|cipherBlockRegister:block-cipher ; work         ;
+; |main                                 ; 219 (0)     ; 106 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 78   ; 0            ; 113 (0)      ; 31 (0)            ; 75 (0)           ; |main                                  ; work         ;
+;    |ALU:inst1|                        ; 56 (56)     ; 48 (48)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 16 (16)           ; 34 (34)          ; |main|ALU:inst1                        ; work         ;
+;    |cipherBlockRegister:block-cipher| ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 14 (14)           ; 2 (2)            ; |main|cipherBlockRegister:block-cipher ; work         ;
 ;    |customClock:clock|                ; 48 (48)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 1 (1)             ; 25 (25)          ; |main|customClock:clock                ; work         ;
-;    |displayMux:Display_Multiplexer|   ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; |main|displayMux:Display_Multiplexer   ; work         ;
+;    |displayMux:Display_Multiplexer|   ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |main|displayMux:Display_Multiplexer   ; work         ;
 ;    |setter:inst|                      ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |main|setter:inst                      ; work         ;
 ;    |sevenSegDriver:inst15|            ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |main|sevenSegDriver:inst15            ; work         ;
 ;    |sevenSegDriver:inst16|            ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |main|sevenSegDriver:inst16            ; work         ;
@@ -1423,189 +1423,195 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Switches[17] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Switches[16] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; clk          ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; Enable       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Enable       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Reset        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Switches[0]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Set_Key      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; Switches[1]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Switches[0]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Set_Key      ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
+; Switches[1]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Switches[2]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Switches[3]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Switches[3]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Switches[4]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Switches[5]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Switches[6]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Switches[5]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Switches[6]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Switches[7]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Switches[8]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Switches[9]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Switches[10] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Switches[11] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Switches[12] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Switches[13] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Switches[14] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Switches[9]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Switches[10] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Switches[11] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Switches[12] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Switches[13] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Switches[14] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Switches[15] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +--------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+--------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                 ;
-+--------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                              ; Pad To Core Index ; Setting ;
-+--------------------------------------------------+-------------------+---------+
-; Switches[17]                                     ;                   ;         ;
-; Switches[16]                                     ;                   ;         ;
-; clk                                              ;                   ;         ;
-; Enable                                           ;                   ;         ;
-;      - varbitreg:message|Q[0]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[1]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[2]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[3]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[4]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[5]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[6]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[7]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[8]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[9]                    ; 1                 ; 6       ;
-;      - varbitreg:message|Q[10]                   ; 1                 ; 6       ;
-;      - varbitreg:message|Q[11]                   ; 1                 ; 6       ;
-;      - varbitreg:message|Q[12]                   ; 1                 ; 6       ;
-;      - varbitreg:message|Q[13]                   ; 1                 ; 6       ;
-;      - varbitreg:message|Q[14]                   ; 1                 ; 6       ;
-;      - varbitreg:message|Q[15]                   ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[15]    ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[14]    ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[13]    ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[12]    ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[11]    ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[10]    ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[9]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[8]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[7]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[6]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[5]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[4]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[3]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[2]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[1]     ; 1                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[0]     ; 1                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[3]~1 ; 1                 ; 6       ;
-; Reset                                            ;                   ;         ;
-;      - ALU:algorithm_logic_unit|output_text[0]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[1]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[2]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[3]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[4]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[5]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[6]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[7]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[8]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[9]   ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[10]  ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[11]  ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[12]  ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[13]  ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[14]  ; 0                 ; 6       ;
-;      - ALU:algorithm_logic_unit|output_text[15]  ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[0]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[1]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[2]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[3]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[4]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[5]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[6]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[7]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[8]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[9]     ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[10]    ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[11]    ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[12]    ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[13]    ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[14]    ; 0                 ; 6       ;
-;      - cipherBlockRegister:block-cipher|Q[15]    ; 0                 ; 6       ;
-;      - customClock:clock|count[24]               ; 0                 ; 6       ;
-;      - customClock:clock|count[22]               ; 0                 ; 6       ;
-;      - customClock:clock|count[21]               ; 0                 ; 6       ;
-;      - customClock:clock|count[23]               ; 0                 ; 6       ;
-;      - customClock:clock|count[20]               ; 0                 ; 6       ;
-;      - customClock:clock|count[19]               ; 0                 ; 6       ;
-;      - customClock:clock|count[18]               ; 0                 ; 6       ;
-;      - customClock:clock|count[17]               ; 0                 ; 6       ;
-;      - customClock:clock|count[16]               ; 0                 ; 6       ;
-;      - customClock:clock|count[14]               ; 0                 ; 6       ;
-;      - customClock:clock|count[13]               ; 0                 ; 6       ;
-;      - customClock:clock|count[15]               ; 0                 ; 6       ;
-;      - customClock:clock|count[12]               ; 0                 ; 6       ;
-;      - customClock:clock|count[11]               ; 0                 ; 6       ;
-;      - customClock:clock|count[10]               ; 0                 ; 6       ;
-;      - customClock:clock|count[9]                ; 0                 ; 6       ;
-;      - customClock:clock|count[6]                ; 0                 ; 6       ;
-;      - customClock:clock|count[8]                ; 0                 ; 6       ;
-;      - customClock:clock|count[7]                ; 0                 ; 6       ;
-;      - customClock:clock|count[5]                ; 0                 ; 6       ;
-;      - customClock:clock|count[4]                ; 0                 ; 6       ;
-;      - customClock:clock|count[3]                ; 0                 ; 6       ;
-;      - customClock:clock|count[2]                ; 0                 ; 6       ;
-;      - customClock:clock|count[1]                ; 0                 ; 6       ;
-;      - customClock:clock|count[0]                ; 0                 ; 6       ;
-;      - customClock:clock|togglebit~0             ; 0                 ; 6       ;
-; Switches[0]                                      ;                   ;         ;
-;      - setter:inst|saved_message[0]              ; 1                 ; 6       ;
-; Set_Key                                          ;                   ;         ;
-;      - setter:inst|saved_message[15]~0           ; 0                 ; 0       ;
-; Switches[1]                                      ;                   ;         ;
-;      - setter:inst|saved_message[1]              ; 1                 ; 6       ;
-; Switches[2]                                      ;                   ;         ;
-;      - setter:inst|saved_message[2]              ; 0                 ; 6       ;
-; Switches[3]                                      ;                   ;         ;
-;      - setter:inst|saved_message[3]              ; 1                 ; 6       ;
-; Switches[4]                                      ;                   ;         ;
-;      - setter:inst|saved_message[4]              ; 0                 ; 6       ;
-; Switches[5]                                      ;                   ;         ;
-;      - setter:inst|saved_message[5]              ; 1                 ; 6       ;
-; Switches[6]                                      ;                   ;         ;
-;      - setter:inst|saved_message[6]              ; 1                 ; 6       ;
-; Switches[7]                                      ;                   ;         ;
-;      - setter:inst|saved_message[7]              ; 0                 ; 6       ;
-; Switches[8]                                      ;                   ;         ;
-;      - setter:inst|saved_message[8]              ; 0                 ; 6       ;
-; Switches[9]                                      ;                   ;         ;
-;      - setter:inst|saved_message[9]              ; 1                 ; 6       ;
-; Switches[10]                                     ;                   ;         ;
-;      - setter:inst|saved_message[10]             ; 1                 ; 6       ;
-; Switches[11]                                     ;                   ;         ;
-;      - setter:inst|saved_message[11]             ; 1                 ; 6       ;
-; Switches[12]                                     ;                   ;         ;
-;      - setter:inst|saved_message[12]             ; 0                 ; 6       ;
-; Switches[13]                                     ;                   ;         ;
-;      - setter:inst|saved_message[13]             ; 1                 ; 6       ;
-; Switches[14]                                     ;                   ;         ;
-;      - setter:inst|saved_message[14]             ; 0                 ; 6       ;
-; Switches[15]                                     ;                   ;         ;
-;      - setter:inst|saved_message[15]             ; 0                 ; 6       ;
-+--------------------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                              ;
++-----------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                           ; Pad To Core Index ; Setting ;
++-----------------------------------------------+-------------------+---------+
+; Switches[17]                                  ;                   ;         ;
+; Switches[16]                                  ;                   ;         ;
+; clk                                           ;                   ;         ;
+; Enable                                        ;                   ;         ;
+;      - varbitreg:message|Q[0]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[1]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[2]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[3]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[4]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[5]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[6]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[7]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[8]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[9]                 ; 0                 ; 6       ;
+;      - varbitreg:message|Q[10]                ; 0                 ; 6       ;
+;      - varbitreg:message|Q[11]                ; 0                 ; 6       ;
+;      - varbitreg:message|Q[12]                ; 0                 ; 6       ;
+;      - varbitreg:message|Q[13]                ; 0                 ; 6       ;
+;      - varbitreg:message|Q[14]                ; 0                 ; 6       ;
+;      - varbitreg:message|Q[15]                ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[3]~0             ; 0                 ; 6       ;
+;      - ALU:inst1|cipher3[3]~0                 ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[12] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[15] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[14] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[13] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[11] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[10] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[9]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[8]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[7]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[6]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[5]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[4]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[3]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[2]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[1]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[0]  ; 0                 ; 6       ;
+;      - ALU:inst1|hex3[3]~1                    ; 0                 ; 6       ;
+; Reset                                         ;                   ;         ;
+;      - ALU:inst1|output_text[0]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[1]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[2]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[3]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[4]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[5]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[6]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[7]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[8]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[9]               ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[10]              ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[11]              ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[12]              ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[13]              ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[14]              ; 0                 ; 6       ;
+;      - ALU:inst1|output_text[15]              ; 0                 ; 6       ;
+;      - ALU:inst1|cipher3[3]~0                 ; 0                 ; 6       ;
+;      - customClock:clock|count[24]            ; 0                 ; 6       ;
+;      - customClock:clock|count[22]            ; 0                 ; 6       ;
+;      - customClock:clock|count[21]            ; 0                 ; 6       ;
+;      - customClock:clock|count[23]            ; 0                 ; 6       ;
+;      - customClock:clock|count[20]            ; 0                 ; 6       ;
+;      - customClock:clock|count[19]            ; 0                 ; 6       ;
+;      - customClock:clock|count[18]            ; 0                 ; 6       ;
+;      - customClock:clock|count[17]            ; 0                 ; 6       ;
+;      - customClock:clock|count[16]            ; 0                 ; 6       ;
+;      - customClock:clock|count[14]            ; 0                 ; 6       ;
+;      - customClock:clock|count[13]            ; 0                 ; 6       ;
+;      - customClock:clock|count[15]            ; 0                 ; 6       ;
+;      - customClock:clock|count[12]            ; 0                 ; 6       ;
+;      - customClock:clock|count[11]            ; 0                 ; 6       ;
+;      - customClock:clock|count[10]            ; 0                 ; 6       ;
+;      - customClock:clock|count[9]             ; 0                 ; 6       ;
+;      - customClock:clock|count[6]             ; 0                 ; 6       ;
+;      - customClock:clock|count[8]             ; 0                 ; 6       ;
+;      - customClock:clock|count[7]             ; 0                 ; 6       ;
+;      - customClock:clock|count[5]             ; 0                 ; 6       ;
+;      - customClock:clock|count[4]             ; 0                 ; 6       ;
+;      - customClock:clock|count[3]             ; 0                 ; 6       ;
+;      - customClock:clock|count[2]             ; 0                 ; 6       ;
+;      - customClock:clock|count[1]             ; 0                 ; 6       ;
+;      - customClock:clock|count[0]             ; 0                 ; 6       ;
+;      - customClock:clock|togglebit~0          ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[12] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[15] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[14] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[13] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[11] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[10] ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[9]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[8]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[7]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[6]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[5]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[4]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[3]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[2]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[1]  ; 0                 ; 6       ;
+;      - cipherBlockRegister:block-cipher|Q[0]  ; 0                 ; 6       ;
+;      - ALU:inst1|hex3[3]~1                    ; 0                 ; 6       ;
+; Switches[0]                                   ;                   ;         ;
+;      - setter:inst|saved_message[0]           ; 0                 ; 6       ;
+; Set_Key                                       ;                   ;         ;
+;      - setter:inst|saved_message[15]~0        ; 1                 ; 0       ;
+; Switches[1]                                   ;                   ;         ;
+;      - setter:inst|saved_message[1]           ; 0                 ; 6       ;
+; Switches[2]                                   ;                   ;         ;
+;      - setter:inst|saved_message[2]           ; 0                 ; 6       ;
+; Switches[3]                                   ;                   ;         ;
+;      - setter:inst|saved_message[3]           ; 0                 ; 6       ;
+; Switches[4]                                   ;                   ;         ;
+;      - setter:inst|saved_message[4]           ; 0                 ; 6       ;
+; Switches[5]                                   ;                   ;         ;
+;      - setter:inst|saved_message[5]           ; 0                 ; 6       ;
+; Switches[6]                                   ;                   ;         ;
+;      - setter:inst|saved_message[6]           ; 0                 ; 6       ;
+; Switches[7]                                   ;                   ;         ;
+;      - setter:inst|saved_message[7]           ; 0                 ; 6       ;
+; Switches[8]                                   ;                   ;         ;
+;      - setter:inst|saved_message[8]           ; 0                 ; 6       ;
+; Switches[9]                                   ;                   ;         ;
+;      - setter:inst|saved_message[9]           ; 0                 ; 6       ;
+; Switches[10]                                  ;                   ;         ;
+;      - setter:inst|saved_message[10]          ; 0                 ; 6       ;
+; Switches[11]                                  ;                   ;         ;
+;      - setter:inst|saved_message[11]          ; 0                 ; 6       ;
+; Switches[12]                                  ;                   ;         ;
+;      - setter:inst|saved_message[12]          ; 1                 ; 6       ;
+; Switches[13]                                  ;                   ;         ;
+;      - setter:inst|saved_message[13]          ; 0                 ; 6       ;
+; Switches[14]                                  ;                   ;         ;
+;      - setter:inst|saved_message[14]          ; 1                 ; 6       ;
+; Switches[15]                                  ;                   ;         ;
+;      - setter:inst|saved_message[15]          ; 0                 ; 6       ;
++-----------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                       ;
-+-------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                      ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; ALU:algorithm_logic_unit|output_text[3]~1 ; LCCOMB_X88_Y2_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Enable                                    ; PIN_M23           ; 33      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Reset                                     ; PIN_M21           ; 58      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clk                                       ; PIN_Y2            ; 42      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; customClock:clock|togglebit               ; FF_X70_Y40_N19    ; 32      ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; setter:inst|saved_message[15]~0           ; LCCOMB_X84_Y2_N0  ; 16      ; Latch enable ; yes    ; Global Clock         ; GCLK16           ; --                        ;
-+-------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                             ;
++---------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                            ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; ALU:inst1|cipher3[3]~0          ; LCCOMB_X83_Y1_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ALU:inst1|hex3[3]~1             ; LCCOMB_X80_Y1_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ALU:inst1|output_text[3]~0      ; LCCOMB_X77_Y1_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Enable                          ; PIN_M23           ; 35      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Reset                           ; PIN_M21           ; 60      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clk                             ; PIN_Y2            ; 42      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; customClock:clock|togglebit     ; FF_X83_Y38_N31    ; 64      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; setter:inst|saved_message[15]~0 ; LCCOMB_X59_Y1_N30 ; 16      ; Latch enable ; yes    ; Global Clock         ; GCLK15           ; --                        ;
++---------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                               ;
-+---------------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                            ; Location         ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                             ; PIN_Y2           ; 42      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; customClock:clock|togglebit     ; FF_X70_Y40_N19   ; 32      ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
-; setter:inst|saved_message[15]~0 ; LCCOMB_X84_Y2_N0 ; 16      ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
-+---------------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                ;
++---------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                            ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; clk                             ; PIN_Y2            ; 42      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; customClock:clock|togglebit     ; FF_X83_Y38_N31    ; 64      ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; setter:inst|saved_message[15]~0 ; LCCOMB_X59_Y1_N30 ; 16      ; 0                                    ; Global Clock         ; GCLK15           ; --                        ;
++---------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -1613,11 +1619,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------+---------+
 ; Name                                                    ; Fan-Out ;
 +---------------------------------------------------------+---------+
-; Switches[17]~input                                      ; 62      ;
-; Switches[16]~input                                      ; 61      ;
-; Reset~input                                             ; 58      ;
-; Enable~input                                            ; 33      ;
-; ALU:algorithm_logic_unit|output_text[3]~1               ; 16      ;
+; Reset~input                                             ; 60      ;
+; Switches[17]~input                                      ; 48      ;
+; Switches[16]~input                                      ; 46      ;
+; Enable~input                                            ; 35      ;
+; ALU:inst1|hex3[3]~1                                     ; 16      ;
+; ALU:inst1|Equal4~4                                      ; 16      ;
+; ALU:inst1|cipher3[3]~0                                  ; 16      ;
+; ALU:inst1|output_text[3]~0                              ; 16      ;
 ; customClock:clock|Equal0~7                              ; 14      ;
 ; varbitreg:message|Q[15]                                 ; 9       ;
 ; varbitreg:message|Q[14]                                 ; 9       ;
@@ -1635,7 +1644,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; varbitreg:message|Q[2]                                  ; 9       ;
 ; varbitreg:message|Q[1]                                  ; 9       ;
 ; varbitreg:message|Q[0]                                  ; 9       ;
-; ALU:algorithm_logic_unit|Equal1~4                       ; 8       ;
 ; displayMux:Display_Multiplexer|right_four_digits[7]~15  ; 7       ;
 ; displayMux:Display_Multiplexer|right_four_digits[6]~14  ; 7       ;
 ; displayMux:Display_Multiplexer|right_four_digits[5]~13  ; 7       ;
@@ -1668,6 +1676,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; setter:inst|saved_message[2]                            ; 2       ;
 ; setter:inst|saved_message[1]                            ; 2       ;
 ; setter:inst|saved_message[0]                            ; 2       ;
+; cipherBlockRegister:block-cipher|Q[0]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[1]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[2]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[3]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[4]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[5]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[6]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[7]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[8]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[9]                   ; 2       ;
+; cipherBlockRegister:block-cipher|Q[10]                  ; 2       ;
+; cipherBlockRegister:block-cipher|Q[11]                  ; 2       ;
+; cipherBlockRegister:block-cipher|Q[13]                  ; 2       ;
+; cipherBlockRegister:block-cipher|Q[14]                  ; 2       ;
+; cipherBlockRegister:block-cipher|Q[15]                  ; 2       ;
+; cipherBlockRegister:block-cipher|Q[12]                  ; 2       ;
 ; customClock:clock|count[0]                              ; 2       ;
 ; customClock:clock|count[1]                              ; 2       ;
 ; customClock:clock|count[2]                              ; 2       ;
@@ -1693,22 +1717,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; customClock:clock|count[21]                             ; 2       ;
 ; customClock:clock|count[22]                             ; 2       ;
 ; customClock:clock|count[24]                             ; 2       ;
-; ALU:algorithm_logic_unit|output_text[7]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[6]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[5]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[4]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[15]                ; 2       ;
-; ALU:algorithm_logic_unit|output_text[14]                ; 2       ;
-; ALU:algorithm_logic_unit|output_text[13]                ; 2       ;
-; ALU:algorithm_logic_unit|output_text[12]                ; 2       ;
-; ALU:algorithm_logic_unit|output_text[11]                ; 2       ;
-; ALU:algorithm_logic_unit|output_text[10]                ; 2       ;
-; ALU:algorithm_logic_unit|output_text[9]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[8]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[3]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[2]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[1]                 ; 2       ;
-; ALU:algorithm_logic_unit|output_text[0]                 ; 2       ;
+; ALU:inst1|output_text[7]                                ; 2       ;
+; ALU:inst1|output_text[6]                                ; 2       ;
+; ALU:inst1|output_text[5]                                ; 2       ;
+; ALU:inst1|output_text[4]                                ; 2       ;
+; ALU:inst1|output_text[15]                               ; 2       ;
+; ALU:inst1|output_text[14]                               ; 2       ;
+; ALU:inst1|output_text[13]                               ; 2       ;
+; ALU:inst1|output_text[12]                               ; 2       ;
+; ALU:inst1|output_text[11]                               ; 2       ;
+; ALU:inst1|output_text[10]                               ; 2       ;
+; ALU:inst1|output_text[9]                                ; 2       ;
+; ALU:inst1|output_text[8]                                ; 2       ;
+; ALU:inst1|output_text[3]                                ; 2       ;
+; ALU:inst1|output_text[2]                                ; 2       ;
+; ALU:inst1|output_text[1]                                ; 2       ;
+; ALU:inst1|output_text[0]                                ; 2       ;
 ; Switches[15]~input                                      ; 1       ;
 ; Switches[14]~input                                      ; 1       ;
 ; Switches[13]~input                                      ; 1       ;
@@ -1782,6 +1806,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sevenSegDriver:inst22|Mux1~3                            ; 1       ;
 ; sevenSegDriver:inst22|Mux0~6                            ; 1       ;
 ; sevenSegDriver:inst22|Mux0~3                            ; 1       ;
+; ALU:inst1|hex2~3                                        ; 1       ;
+; ALU:inst1|hex2~2                                        ; 1       ;
+; ALU:inst1|hex2~1                                        ; 1       ;
+; ALU:inst1|hex2~0                                        ; 1       ;
+; ALU:inst1|hex0~3                                        ; 1       ;
+; ALU:inst1|hex0~2                                        ; 1       ;
+; ALU:inst1|hex0~1                                        ; 1       ;
+; ALU:inst1|hex0~0                                        ; 1       ;
+; ALU:inst1|hex1~3                                        ; 1       ;
+; ALU:inst1|hex1~2                                        ; 1       ;
+; ALU:inst1|hex1~1                                        ; 1       ;
+; ALU:inst1|hex1~0                                        ; 1       ;
+; ALU:inst1|hex3~4                                        ; 1       ;
+; ALU:inst1|hex3~3                                        ; 1       ;
+; ALU:inst1|hex3~2                                        ; 1       ;
 ; customClock:clock|count~12                              ; 1       ;
 ; customClock:clock|count~11                              ; 1       ;
 ; customClock:clock|count~10                              ; 1       ;
@@ -1795,6 +1834,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; customClock:clock|count~2                               ; 1       ;
 ; customClock:clock|count~1                               ; 1       ;
 ; customClock:clock|count~0                               ; 1       ;
+; ALU:inst1|hex3~0                                        ; 1       ;
+; ALU:inst1|Equal4~3                                      ; 1       ;
+; ALU:inst1|Equal4~2                                      ; 1       ;
+; ALU:inst1|Equal4~1                                      ; 1       ;
+; ALU:inst1|Equal4~0                                      ; 1       ;
+; ALU:inst1|hex2[3]                                       ; 1       ;
+; ALU:inst1|hex2[2]                                       ; 1       ;
+; ALU:inst1|hex2[1]                                       ; 1       ;
+; ALU:inst1|hex2[0]                                       ; 1       ;
+; ALU:inst1|hex0[3]                                       ; 1       ;
+; ALU:inst1|hex0[2]                                       ; 1       ;
+; ALU:inst1|hex0[1]                                       ; 1       ;
+; ALU:inst1|hex0[0]                                       ; 1       ;
+; ALU:inst1|hex1[3]                                       ; 1       ;
+; ALU:inst1|hex1[2]                                       ; 1       ;
+; ALU:inst1|hex1[1]                                       ; 1       ;
+; ALU:inst1|hex1[0]                                       ; 1       ;
+; ALU:inst1|hex3[3]                                       ; 1       ;
+; ALU:inst1|hex3[2]                                       ; 1       ;
+; ALU:inst1|hex3[1]                                       ; 1       ;
 ; customClock:clock|togglebit~0                           ; 1       ;
 ; customClock:clock|Equal0~6                              ; 1       ;
 ; customClock:clock|Equal0~5                              ; 1       ;
@@ -1803,43 +1862,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; customClock:clock|Equal0~2                              ; 1       ;
 ; customClock:clock|Equal0~1                              ; 1       ;
 ; customClock:clock|Equal0~0                              ; 1       ;
-; ALU:algorithm_logic_unit|output_text~16                 ; 1       ;
-; ALU:algorithm_logic_unit|output_text~15                 ; 1       ;
-; ALU:algorithm_logic_unit|output_text~14                 ; 1       ;
-; ALU:algorithm_logic_unit|output_text~13                 ; 1       ;
-; ALU:algorithm_logic_unit|output_text~12                 ; 1       ;
-; ALU:algorithm_logic_unit|output_text~11                 ; 1       ;
-; ALU:algorithm_logic_unit|output_text~10                 ; 1       ;
-; ALU:algorithm_logic_unit|output_text~9                  ; 1       ;
-; ALU:algorithm_logic_unit|output_text~8                  ; 1       ;
-; ALU:algorithm_logic_unit|output_text~7                  ; 1       ;
-; ALU:algorithm_logic_unit|output_text~6                  ; 1       ;
-; ALU:algorithm_logic_unit|output_text~5                  ; 1       ;
-; ALU:algorithm_logic_unit|output_text~4                  ; 1       ;
-; ALU:algorithm_logic_unit|output_text~3                  ; 1       ;
-; ALU:algorithm_logic_unit|output_text~2                  ; 1       ;
+; ALU:inst1|hex3[0]                                       ; 1       ;
+; ALU:inst1|cipher2[3]                                    ; 1       ;
+; ALU:inst1|cipher2[2]                                    ; 1       ;
+; ALU:inst1|cipher2[1]                                    ; 1       ;
+; ALU:inst1|cipher2[0]                                    ; 1       ;
+; ALU:inst1|cipher0[3]                                    ; 1       ;
+; ALU:inst1|cipher0[2]                                    ; 1       ;
+; ALU:inst1|cipher0[1]                                    ; 1       ;
+; ALU:inst1|cipher0[0]                                    ; 1       ;
+; ALU:inst1|cipher1[3]                                    ; 1       ;
+; ALU:inst1|cipher1[2]                                    ; 1       ;
+; ALU:inst1|cipher1[1]                                    ; 1       ;
+; ALU:inst1|cipher1[0]                                    ; 1       ;
+; ALU:inst1|cipher3[3]                                    ; 1       ;
+; ALU:inst1|cipher3[2]                                    ; 1       ;
+; ALU:inst1|cipher3[1]                                    ; 1       ;
 ; customClock:clock|togglebit                             ; 1       ;
-; ALU:algorithm_logic_unit|output_text~0                  ; 1       ;
-; ALU:algorithm_logic_unit|Equal1~3                       ; 1       ;
-; cipherBlockRegister:block-cipher|Q[0]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[1]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[2]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[3]                   ; 1       ;
-; ALU:algorithm_logic_unit|Equal1~2                       ; 1       ;
-; cipherBlockRegister:block-cipher|Q[4]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[5]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[6]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[7]                   ; 1       ;
-; ALU:algorithm_logic_unit|Equal1~1                       ; 1       ;
-; cipherBlockRegister:block-cipher|Q[8]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[9]                   ; 1       ;
-; cipherBlockRegister:block-cipher|Q[10]                  ; 1       ;
-; cipherBlockRegister:block-cipher|Q[11]                  ; 1       ;
-; ALU:algorithm_logic_unit|Equal1~0                       ; 1       ;
-; cipherBlockRegister:block-cipher|Q[12]                  ; 1       ;
-; cipherBlockRegister:block-cipher|Q[13]                  ; 1       ;
-; cipherBlockRegister:block-cipher|Q[14]                  ; 1       ;
-; cipherBlockRegister:block-cipher|Q[15]                  ; 1       ;
+; ALU:inst1|cipher3[0]                                    ; 1       ;
 ; sevenSegDriver:inst19|Mux6~0                            ; 1       ;
 ; sevenSegDriver:inst19|Mux5~0                            ; 1       ;
 ; sevenSegDriver:inst19|Mux4~0                            ; 1       ;
@@ -1925,148 +1965,162 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 241 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 57 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 169 / 209,544 ( < 1 % ) ;
-; Direct links          ; 50 / 342,891 ( < 1 % )  ;
+; Block interconnects   ; 273 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 51 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 161 / 209,544 ( < 1 % ) ;
+; Direct links          ; 58 / 342,891 ( < 1 % )  ;
 ; Global clocks         ; 3 / 20 ( 15 % )         ;
-; Local interconnects   ; 89 / 119,088 ( < 1 % )  ;
-; R24 interconnects     ; 56 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 218 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 109 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 48 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 273 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.44) ; Number of LABs  (Total = 16) ;
+; Number of Logic Elements  (Average = 12.88) ; Number of LABs  (Total = 17) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
+; 1                                           ; 1                            ;
 ; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 2                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 3                            ;
+; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
+; 9                                           ; 1                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 9                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 2                            ;
+; 16                                          ; 8                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.19) ; Number of LABs  (Total = 16) ;
+; LAB-wide Signals  (Average = 1.35) ; Number of LABs  (Total = 17) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
-; 1 Clock                            ; 6                            ;
-; 1 Clock enable                     ; 4                            ;
-; 2 Clock enables                    ; 1                            ;
-; 2 Clocks                           ; 2                            ;
+; 1 Async. clear                     ; 7                            ;
+; 1 Clock                            ; 9                            ;
+; 1 Clock enable                     ; 3                            ;
+; 2 Clock enables                    ; 3                            ;
+; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.06) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced  (Average = 19.12) ; Number of LABs  (Total = 17) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
+; 1                                            ; 1                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 2                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 3                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 2                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
+; 24                                           ; 3                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 1                            ;
-; 29                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
 ; 30                                           ; 0                            ;
 ; 31                                           ; 0                            ;
-; 32                                           ; 1                            ;
+; 32                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.44) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced Out  (Average = 9.94) ; Number of LABs  (Total = 17) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 0                            ;
+; 1                                               ; 1                            ;
 ; 2                                               ; 0                            ;
 ; 3                                               ; 0                            ;
 ; 4                                               ; 1                            ;
-; 5                                               ; 2                            ;
+; 5                                               ; 0                            ;
 ; 6                                               ; 1                            ;
-; 7                                               ; 4                            ;
-; 8                                               ; 0                            ;
+; 7                                               ; 3                            ;
+; 8                                               ; 2                            ;
 ; 9                                               ; 1                            ;
 ; 10                                              ; 1                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 2                            ;
-; 16                                              ; 1                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 1                            ;
+; 13                                              ; 2                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 1                            ;
+; 16                                              ; 2                            ;
+; 17                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.69) ; Number of LABs  (Total = 16) ;
+; Number of Distinct Inputs  (Average = 12.06) ; Number of LABs  (Total = 17) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 5                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 3                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 1                            ;
+; 6                                            ; 2                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 1                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 2                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 0                            ;
+; 33                                           ; 0                            ;
+; 34                                           ; 0                            ;
+; 35                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2253,7 +2307,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+-----------------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s)        ; Delay Added in ns ;
 +-----------------+-----------------------------+-------------------+
-; clk             ; customClock:clock|togglebit ; 16.1              ;
+; clk             ; customClock:clock|togglebit ; 6.8               ;
 ; clk             ; clk                         ; 2.1               ;
 ; clk,I/O         ; clk                         ; 1.4               ;
 +-----------------+-----------------------------+-------------------+
@@ -2261,55 +2315,55 @@ Note: For more information on problematic transfers, consider running the Fitter
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                              ;
-+-----------------------------+------------------------------------------+-------------------+
-; Source Register             ; Destination Register                     ; Delay Added in ns ;
-+-----------------------------+------------------------------------------+-------------------+
-; customClock:clock|togglebit ; customClock:clock|togglebit              ; 3.471             ;
-; customClock:clock|count[24] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[22] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[21] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[23] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[20] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[19] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[18] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[17] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[16] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[14] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[13] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[15] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[12] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[11] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[10] ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[9]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[8]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[6]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[7]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[5]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[4]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[3]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[2]  ; customClock:clock|togglebit              ; 1.359             ;
-; Reset                       ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[1]  ; customClock:clock|togglebit              ; 1.359             ;
-; customClock:clock|count[0]  ; customClock:clock|togglebit              ; 1.359             ;
-; varbitreg:message|Q[7]      ; ALU:algorithm_logic_unit|output_text[7]  ; 1.183             ;
-; varbitreg:message|Q[6]      ; ALU:algorithm_logic_unit|output_text[6]  ; 1.183             ;
-; varbitreg:message|Q[5]      ; ALU:algorithm_logic_unit|output_text[5]  ; 1.183             ;
-; varbitreg:message|Q[4]      ; ALU:algorithm_logic_unit|output_text[4]  ; 1.183             ;
-; varbitreg:message|Q[3]      ; ALU:algorithm_logic_unit|output_text[3]  ; 1.183             ;
-; varbitreg:message|Q[1]      ; ALU:algorithm_logic_unit|output_text[1]  ; 1.183             ;
-; varbitreg:message|Q[15]     ; ALU:algorithm_logic_unit|output_text[15] ; 0.977             ;
-; varbitreg:message|Q[13]     ; ALU:algorithm_logic_unit|output_text[13] ; 0.977             ;
-; varbitreg:message|Q[11]     ; ALU:algorithm_logic_unit|output_text[11] ; 0.977             ;
-; varbitreg:message|Q[14]     ; ALU:algorithm_logic_unit|output_text[14] ; 0.937             ;
-; varbitreg:message|Q[12]     ; ALU:algorithm_logic_unit|output_text[12] ; 0.937             ;
-; varbitreg:message|Q[0]      ; ALU:algorithm_logic_unit|output_text[0]  ; 0.937             ;
-; varbitreg:message|Q[10]     ; ALU:algorithm_logic_unit|output_text[10] ; 0.930             ;
-; varbitreg:message|Q[8]      ; ALU:algorithm_logic_unit|output_text[8]  ; 0.930             ;
-; varbitreg:message|Q[9]      ; ALU:algorithm_logic_unit|output_text[9]  ; 0.715             ;
-; varbitreg:message|Q[2]      ; ALU:algorithm_logic_unit|output_text[2]  ; 0.709             ;
-+-----------------------------+------------------------------------------+-------------------+
++-------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                 ;
++-----------------------------+-----------------------------+-------------------+
+; Source Register             ; Destination Register        ; Delay Added in ns ;
++-----------------------------+-----------------------------+-------------------+
+; customClock:clock|togglebit ; customClock:clock|togglebit ; 3.471             ;
+; customClock:clock|count[24] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[22] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[21] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[23] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[20] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[19] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[18] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[17] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[16] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[14] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[13] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[15] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[12] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[11] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[10] ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[9]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[8]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[6]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[7]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[5]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[4]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[3]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[2]  ; customClock:clock|togglebit ; 1.385             ;
+; Reset                       ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[1]  ; customClock:clock|togglebit ; 1.385             ;
+; customClock:clock|count[0]  ; customClock:clock|togglebit ; 1.385             ;
+; varbitreg:message|Q[11]     ; ALU:inst1|hex2[3]           ; 0.437             ;
+; varbitreg:message|Q[9]      ; ALU:inst1|hex2[1]           ; 0.437             ;
+; varbitreg:message|Q[14]     ; ALU:inst1|hex3[2]           ; 0.433             ;
+; varbitreg:message|Q[12]     ; ALU:inst1|hex3[0]           ; 0.433             ;
+; varbitreg:message|Q[10]     ; ALU:inst1|hex2[2]           ; 0.433             ;
+; varbitreg:message|Q[8]      ; ALU:inst1|hex2[0]           ; 0.433             ;
+; varbitreg:message|Q[15]     ; ALU:inst1|hex3[3]           ; 0.432             ;
+; varbitreg:message|Q[13]     ; ALU:inst1|hex3[1]           ; 0.432             ;
+; varbitreg:message|Q[7]      ; ALU:inst1|hex1[3]           ; 0.432             ;
+; varbitreg:message|Q[6]      ; ALU:inst1|hex1[2]           ; 0.416             ;
+; varbitreg:message|Q[5]      ; ALU:inst1|hex1[1]           ; 0.416             ;
+; varbitreg:message|Q[4]      ; ALU:inst1|hex1[0]           ; 0.416             ;
+; varbitreg:message|Q[3]      ; ALU:inst1|hex0[3]           ; 0.416             ;
+; varbitreg:message|Q[2]      ; ALU:inst1|hex0[2]           ; 0.416             ;
+; varbitreg:message|Q[1]      ; ALU:inst1|hex0[1]           ; 0.416             ;
+; varbitreg:message|Q[0]      ; ALU:inst1|hex0[0]           ; 0.416             ;
++-----------------------------+-----------------------------+-------------------+
 Note: This table only shows the top 43 path(s) that have the largest delay added for hold.
 
 
@@ -2401,11 +2455,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X81_Y0 to location X91_Y11
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X81_Y0 to location X91_Y11
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2414,10 +2468,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Azorac/Desktop/version3/output_files/version3.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 5077 megabytes
-    Info: Processing ended: Thu Nov 22 13:30:42 2018
+    Info: Peak virtual memory: 5079 megabytes
+    Info: Processing ended: Thu Nov 22 16:39:17 2018
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +----------------------------+
