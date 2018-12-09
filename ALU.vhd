@@ -115,12 +115,12 @@ begin
 					end if; 
 									
 						-- Step four: Perform the block cipher operation:
-						cipher0 <= std_logic_vector(unsigned(hex0) + unsigned(encryptAdd0)) XOR encryptXOR0;
-						cipher1 <= std_logic_vector(unsigned(hex1) + unsigned(encryptAdd1)) XOR encryptXOR1;
-						cipher2 <= std_logic_vector(unsigned(hex2) + unsigned(encryptAdd2)) XOR encryptXOR2;
-						cipher3 <= std_logic_vector(unsigned(hex3) + unsigned(encryptAdd3)) XOR encryptXOR3;
+						cipher0 <= std_logic_vector(signed(hex0) + signed(encryptAdd0)) XOR encryptXOR0;
+						cipher1 <= std_logic_vector(signed(hex1) + signed(encryptAdd1)) XOR encryptXOR1;
+						cipher2 <= std_logic_vector(signed(hex2) + signed(encryptAdd2)) XOR encryptXOR2;
+						cipher3 <= std_logic_vector(signed(hex3) + signed(encryptAdd3)) XOR encryptXOR3;
 						
-				output_text <= cipher0 & cipher1 & cipher2 & cipher3;
+				output_text <= cipher3 & cipher2 & cipher1 & cipher0;
 					
 				-- Perorm the decryption -- ############################################################################
 				elsif (mode = "11") then
@@ -148,12 +148,12 @@ begin
 					end if; 
 					
 					-- Step 4: Perform the decryption logic
-					cipher0 <= std_logic_vector(unsigned(hex0 XOR encryptXOR0) - unsigned(encryptXOR0));
-					cipher1 <= std_logic_vector(unsigned(hex1 XOR encryptXOR1) - unsigned(encryptXOR1));
-					cipher2 <= std_logic_vector(unsigned(hex2 XOR encryptXOR2) - unsigned(encryptXOR2));
-					cipher3 <= std_logic_vector(unsigned(hex3 XOR encryptXOR3) - unsigned(encryptXOR3));
+					cipher0 <= std_logic_vector(signed(hex0 XOR encryptXOR0) - signed(encryptAdd0));
+					cipher1 <= std_logic_vector(signed(hex1 XOR encryptXOR1) - signed(encryptAdd1));
+					cipher2 <= std_logic_vector(signed(hex2 XOR encryptXOR2) - signed(encryptAdd2));
+					cipher3 <= std_logic_vector(signed(hex3 XOR encryptXOR3) - signed(encryptAdd3));
 					
-					output_text <= cipher0 & cipher1 & cipher2 & cipher3;
+					output_text <= cipher3 & cipher2 & cipher1 & cipher0;
 					
 				end if; -- End of encryption/decryption
 				

@@ -1,5 +1,5 @@
 Flow report for version3
-Sun Dec 09 14:28:38 2018
+Sun Dec 09 17:45:57 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -41,14 +41,14 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sun Dec 09 14:28:32 2018      ;
+; Flow Status                        ; Successful - Sun Dec 09 17:45:51 2018      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; version3                                   ;
 ; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 309 / 114,480 ( < 1 % )                    ;
+; Total logic elements               ; 308 / 114,480 ( < 1 % )                    ;
 ;     Total combinational functions  ; 272 / 114,480 ( < 1 % )                    ;
 ;     Dedicated logic registers      ; 160 / 114,480 ( < 1 % )                    ;
 ; Total registers                    ; 160                                        ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/09/2018 14:28:02 ;
+; Start date & time ; 12/09/2018 17:45:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; version3            ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 264390078731147.154438368114420 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 264390078731147.154439552016312 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --         ;
@@ -93,11 +93,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4728 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:20     ; 1.0                     ; 5079 MB             ; 00:00:19                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4652 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4750 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4727 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:21     ; 1.0                     ; 5078 MB             ; 00:00:20                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 4652 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4746 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
