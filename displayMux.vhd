@@ -10,6 +10,7 @@ entity displayMux is
 		I1		: in std_logic_vector(15 downto 0); -- Pass the original message
 		I2		: in std_logic_vector(15 downto 0); -- Pass the seed value		
 		I3		: in std_logic_vector(1 downto 0); -- Select options for the Seven Segment displays
+		
 
 		
 		left_four_digits : out std_logic_vector(15 downto 0);
@@ -44,13 +45,13 @@ begin
 	 
 		-- Display the original 
 		if (mode = "00") then
-			left_four_digits <= "0000000000000000";
-			right_four_digits <= original_message;
+			left_four_digits <= original_message;
+			right_four_digits <= "0000000000000000";
 			
 		-- Display the seed
 		elsif (mode = "01") then
-			left_four_digits <= seed; 
-			right_four_digits <= "0000000000000000";
+			left_four_digits <= "0000000000000000"; 
+			right_four_digits <= seed;
 			
 		-- Display original message on the left and the encrypted text on the right
 		elsif (mode = "10") then
@@ -59,8 +60,8 @@ begin
 			
 		-- Display the seed on the left and the decrypted text on the right
 		elsif (mode = "11") then
-			left_four_digits <= seed;
-			right_four_digits <= output_message;
+			left_four_digits <= output_message;
+			right_four_digits <= seed;
 			
 		end if;
 	end process;

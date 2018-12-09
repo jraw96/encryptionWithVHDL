@@ -19,7 +19,7 @@ architecture arch of varbitreg is
 begin 
 	process(en, clk) is 
 	begin 
-		if(en = '0' and rising_edge(clk)) then
+		if(en = '1' and rising_edge(clk)) then
 			Q <= D;
 		end if;
 	end process; 

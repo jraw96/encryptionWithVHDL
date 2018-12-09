@@ -40,6 +40,7 @@ begin
 				saved_seed <=switches;
 				
 			end if;
+		
 			
 		end if;
 	end process;

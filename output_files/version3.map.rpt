@@ -1,5 +1,5 @@
 Analysis & Synthesis report for version3
-Thu Nov 22 16:38:54 2018
+Sun Dec 09 14:28:03 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -15,14 +15,13 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: varbitreg:message
- 14. Parameter Settings for User Entity Instance: varbitreg:seed
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: varbitreg:message
+ 13. Parameter Settings for User Entity Instance: varbitreg:seed
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -49,15 +48,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 22 16:38:54 2018      ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 09 14:28:03 2018      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; version3                                   ;
 ; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 236                                        ;
-;     Total combinational functions  ; 188                                        ;
-;     Dedicated logic registers      ; 106                                        ;
-; Total registers                    ; 106                                        ;
+; Total logic elements               ; 340                                        ;
+;     Total combinational functions  ; 272                                        ;
+;     Dedicated logic registers      ; 160                                        ;
+; Total registers                    ; 160                                        ;
 ; Total pins                         ; 78                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -185,28 +184,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 236                         ;
+; Estimated Total logic elements              ; 340                         ;
 ;                                             ;                             ;
-; Total combinational functions               ; 188                         ;
+; Total combinational functions               ; 272                         ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 86                          ;
-;     -- 3 input functions                    ; 63                          ;
-;     -- <=2 input functions                  ; 39                          ;
+;     -- 4 input functions                    ; 112                         ;
+;     -- 3 input functions                    ; 76                          ;
+;     -- <=2 input functions                  ; 84                          ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 164                         ;
-;     -- arithmetic mode                      ; 24                          ;
+;     -- normal mode                          ; 224                         ;
+;     -- arithmetic mode                      ; 48                          ;
 ;                                             ;                             ;
-; Total registers                             ; 106                         ;
-;     -- Dedicated logic registers            ; 106                         ;
+; Total registers                             ; 160                         ;
+;     -- Dedicated logic registers            ; 160                         ;
 ;     -- I/O registers                        ; 0                           ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 78                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                           ;
 ; Maximum fan-out node                        ; customClock:clock|togglebit ;
-; Maximum fan-out                             ; 65                          ;
-; Total fan-out                               ; 1093                        ;
-; Average fan-out                             ; 2.43                        ;
+; Maximum fan-out                             ; 103                         ;
+; Total fan-out                               ; 1520                        ;
+; Average fan-out                             ; 2.59                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -215,21 +214,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; |main                                 ; 188 (0)           ; 106 (0)      ; 0           ; 0            ; 0       ; 0         ; 78   ; 0            ; |main                                  ; work         ;
-;    |ALU:inst1|                        ; 24 (24)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ALU:inst1                        ; work         ;
+; |main                                 ; 272 (0)           ; 160 (0)      ; 0           ; 0            ; 0       ; 0         ; 78   ; 0            ; |main                                  ; work         ;
+;    |ALU:inst1|                        ; 102 (102)         ; 86 (86)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|ALU:inst1                        ; work         ;
 ;    |cipherBlockRegister:block-cipher| ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|cipherBlockRegister:block-cipher ; work         ;
 ;    |customClock:clock|                ; 47 (47)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|customClock:clock                ; work         ;
-;    |displayMux:Display_Multiplexer|   ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|displayMux:Display_Multiplexer   ; work         ;
-;    |setter:inst|                      ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|setter:inst                      ; work         ;
-;    |sevenSegDriver:inst15|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst15            ; work         ;
-;    |sevenSegDriver:inst16|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst16            ; work         ;
-;    |sevenSegDriver:inst17|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst17            ; work         ;
+;    |displayMux:inst3|                 ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|displayMux:inst3                 ; work         ;
+;    |setter:inst|                      ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|setter:inst                      ; work         ;
+;    |sevenSegDriver:inst15|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst15            ; work         ;
+;    |sevenSegDriver:inst16|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst16            ; work         ;
+;    |sevenSegDriver:inst17|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst17            ; work         ;
 ;    |sevenSegDriver:inst18|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst18            ; work         ;
 ;    |sevenSegDriver:inst19|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst19            ; work         ;
 ;    |sevenSegDriver:inst20|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst20            ; work         ;
 ;    |sevenSegDriver:inst21|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst21            ; work         ;
-;    |sevenSegDriver:inst22|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst22            ; work         ;
+;    |sevenSegDriver:inst22|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|sevenSegDriver:inst22            ; work         ;
 ;    |varbitreg:message|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:message                ; work         ;
+;    |varbitreg:seed|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|varbitreg:seed                   ; work         ;
 +---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -239,26 +239,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+-------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
 +-----------------------------------------------------+-------------------------------+------------------------+
-; displayMux:Display_Multiplexer|left_four_digits[0]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[1]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[2]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[3]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[4]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[5]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[6]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[7]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[8]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[9]  ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[10] ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[11] ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[12] ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[13] ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[14] ; VCC                           ; yes                    ;
-; displayMux:Display_Multiplexer|left_four_digits[15] ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[0]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[1]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[2]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[3]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[8]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[9]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[10]              ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[11]              ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[12]              ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[13]              ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[14]              ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[15]              ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[4]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[5]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[6]               ; VCC                           ; yes                    ;
+; displayMux:inst3|right_four_digits[7]               ; VCC                           ; yes                    ;
 ; setter:inst|saved_message[0]                        ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[1]                        ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[2]                        ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[3]                        ; setter:inst|saved_message[15] ; yes                    ;
+; setter:inst|saved_message[4]                        ; setter:inst|saved_message[15] ; yes                    ;
+; setter:inst|saved_message[5]                        ; setter:inst|saved_message[15] ; yes                    ;
+; setter:inst|saved_message[6]                        ; setter:inst|saved_message[15] ; yes                    ;
+; setter:inst|saved_message[7]                        ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[8]                        ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[9]                        ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[10]                       ; setter:inst|saved_message[15] ; yes                    ;
@@ -267,76 +271,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; setter:inst|saved_message[13]                       ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[14]                       ; setter:inst|saved_message[15] ; yes                    ;
 ; setter:inst|saved_message[15]                       ; setter:inst|saved_message[15] ; yes                    ;
-; setter:inst|saved_message[4]                        ; setter:inst|saved_message[15] ; yes                    ;
-; setter:inst|saved_message[5]                        ; setter:inst|saved_message[15] ; yes                    ;
-; setter:inst|saved_message[6]                        ; setter:inst|saved_message[15] ; yes                    ;
-; setter:inst|saved_message[7]                        ; setter:inst|saved_message[15] ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                               ;                        ;
+; setter:inst|saved_seed[0]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[1]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[2]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[3]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[8]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[9]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[10]                          ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[11]                          ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[12]                          ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[13]                          ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[14]                          ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[15]                          ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[4]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[5]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[6]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; setter:inst|saved_seed[7]                           ; setter:inst|saved_seed[15]    ; yes                    ;
+; Number of user-specified and inferred latches = 48  ;                               ;                        ;
 +-----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; varbitreg:seed|Q[0..15]                ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|feedback1                    ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|LSFR_random_number[0..15]    ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|feedback2                    ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|RSFR_random_number[0..15]    ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptAdd0[0..3]            ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptAdd1[0..3]            ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptAdd2[0..3]            ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptAdd3[0..3]            ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptXOR0[0..3]            ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptXOR1[0..3]            ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptXOR2[0..3]            ; Stuck at GND due to stuck port data_in ;
-; ALU:inst1|encryptXOR3[0..3]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 82 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                             ;
-+----------------------+---------------------------+--------------------------------------------------------------------------------------+
-; Register name        ; Reason for Removal        ; Registers Removed due to This Register                                               ;
-+----------------------+---------------------------+--------------------------------------------------------------------------------------+
-; varbitreg:seed|Q[14] ; Stuck at GND              ; ALU:inst1|feedback1, ALU:inst1|LSFR_random_number[15],                               ;
-;                      ; due to stuck port data_in ; ALU:inst1|LSFR_random_number[0], ALU:inst1|RSFR_random_number[13],                   ;
-;                      ;                           ; ALU:inst1|encryptAdd0[0], ALU:inst1|encryptAdd3[3], ALU:inst1|encryptXOR3[1]         ;
-; varbitreg:seed|Q[0]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[1], ALU:inst1|feedback2,                                ;
-;                      ; due to stuck port data_in ; ALU:inst1|RSFR_random_number[15], ALU:inst1|encryptAdd0[1], ALU:inst1|encryptXOR3[3] ;
-; varbitreg:seed|Q[1]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[2], ALU:inst1|RSFR_random_number[0],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd0[2], ALU:inst1|encryptXOR0[0]                                   ;
-; varbitreg:seed|Q[2]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[3], ALU:inst1|RSFR_random_number[1],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd0[3], ALU:inst1|encryptXOR0[1]                                   ;
-; varbitreg:seed|Q[3]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[4], ALU:inst1|RSFR_random_number[2],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd1[0], ALU:inst1|encryptXOR0[2]                                   ;
-; varbitreg:seed|Q[4]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[5], ALU:inst1|RSFR_random_number[3],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd1[1], ALU:inst1|encryptXOR0[3]                                   ;
-; varbitreg:seed|Q[5]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[6], ALU:inst1|RSFR_random_number[4],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd1[2], ALU:inst1|encryptXOR1[0]                                   ;
-; varbitreg:seed|Q[6]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[7], ALU:inst1|RSFR_random_number[5],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd1[3], ALU:inst1|encryptXOR1[1]                                   ;
-; varbitreg:seed|Q[7]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[8], ALU:inst1|RSFR_random_number[6],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd2[0], ALU:inst1|encryptXOR1[2]                                   ;
-; varbitreg:seed|Q[8]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[9], ALU:inst1|RSFR_random_number[7],                    ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd2[1], ALU:inst1|encryptXOR1[3]                                   ;
-; varbitreg:seed|Q[9]  ; Stuck at GND              ; ALU:inst1|LSFR_random_number[10], ALU:inst1|RSFR_random_number[8],                   ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd2[2], ALU:inst1|encryptXOR2[0]                                   ;
-; varbitreg:seed|Q[10] ; Stuck at GND              ; ALU:inst1|LSFR_random_number[11], ALU:inst1|RSFR_random_number[9],                   ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd2[3], ALU:inst1|encryptXOR2[1]                                   ;
-; varbitreg:seed|Q[11] ; Stuck at GND              ; ALU:inst1|LSFR_random_number[12], ALU:inst1|RSFR_random_number[10],                  ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd3[0], ALU:inst1|encryptXOR2[2]                                   ;
-; varbitreg:seed|Q[12] ; Stuck at GND              ; ALU:inst1|LSFR_random_number[13], ALU:inst1|RSFR_random_number[11],                  ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd3[1], ALU:inst1|encryptXOR2[3]                                   ;
-; varbitreg:seed|Q[13] ; Stuck at GND              ; ALU:inst1|LSFR_random_number[14], ALU:inst1|RSFR_random_number[12],                  ;
-;                      ; due to stuck port data_in ; ALU:inst1|encryptAdd3[2], ALU:inst1|encryptXOR3[0]                                   ;
-; varbitreg:seed|Q[15] ; Stuck at GND              ; ALU:inst1|RSFR_random_number[14], ALU:inst1|encryptXOR3[2]                           ;
-;                      ; due to stuck port data_in ;                                                                                      ;
-+----------------------+---------------------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++----------------------------------------+----------------------------------------------+
+; Register name                          ; Reason for Removal                           ;
++----------------------------------------+----------------------------------------------+
+; ALU:inst1|encryptXOR3[0]               ; Merged with ALU:inst1|encryptAdd3[2]         ;
+; ALU:inst1|encryptXOR3[1]               ; Merged with ALU:inst1|encryptAdd3[3]         ;
+; ALU:inst1|encryptXOR2[3]               ; Merged with ALU:inst1|encryptAdd3[1]         ;
+; ALU:inst1|encryptXOR2[2]               ; Merged with ALU:inst1|encryptAdd3[0]         ;
+; ALU:inst1|encryptXOR2[0]               ; Merged with ALU:inst1|encryptAdd2[2]         ;
+; ALU:inst1|encryptXOR2[1]               ; Merged with ALU:inst1|encryptAdd2[3]         ;
+; ALU:inst1|encryptXOR1[3]               ; Merged with ALU:inst1|encryptAdd2[1]         ;
+; ALU:inst1|encryptXOR1[2]               ; Merged with ALU:inst1|encryptAdd2[0]         ;
+; ALU:inst1|encryptXOR1[0]               ; Merged with ALU:inst1|encryptAdd1[2]         ;
+; ALU:inst1|encryptXOR1[1]               ; Merged with ALU:inst1|encryptAdd1[3]         ;
+; ALU:inst1|encryptXOR0[3]               ; Merged with ALU:inst1|encryptAdd1[1]         ;
+; ALU:inst1|encryptXOR0[2]               ; Merged with ALU:inst1|encryptAdd1[0]         ;
+; ALU:inst1|encryptXOR0[0]               ; Merged with ALU:inst1|encryptAdd0[2]         ;
+; ALU:inst1|encryptXOR0[1]               ; Merged with ALU:inst1|encryptAdd0[3]         ;
+; ALU:inst1|RSFR_random_number[12]       ; Merged with ALU:inst1|LSFR_random_number[14] ;
+; ALU:inst1|RSFR_random_number[13]       ; Merged with ALU:inst1|LSFR_random_number[15] ;
+; ALU:inst1|RSFR_random_number[11]       ; Merged with ALU:inst1|LSFR_random_number[13] ;
+; ALU:inst1|RSFR_random_number[10]       ; Merged with ALU:inst1|LSFR_random_number[12] ;
+; ALU:inst1|RSFR_random_number[8]        ; Merged with ALU:inst1|LSFR_random_number[10] ;
+; ALU:inst1|RSFR_random_number[9]        ; Merged with ALU:inst1|LSFR_random_number[11] ;
+; ALU:inst1|RSFR_random_number[7]        ; Merged with ALU:inst1|LSFR_random_number[9]  ;
+; ALU:inst1|RSFR_random_number[6]        ; Merged with ALU:inst1|LSFR_random_number[8]  ;
+; ALU:inst1|RSFR_random_number[4]        ; Merged with ALU:inst1|LSFR_random_number[6]  ;
+; ALU:inst1|RSFR_random_number[5]        ; Merged with ALU:inst1|LSFR_random_number[7]  ;
+; ALU:inst1|RSFR_random_number[3]        ; Merged with ALU:inst1|LSFR_random_number[5]  ;
+; ALU:inst1|RSFR_random_number[2]        ; Merged with ALU:inst1|LSFR_random_number[4]  ;
+; ALU:inst1|RSFR_random_number[0]        ; Merged with ALU:inst1|LSFR_random_number[2]  ;
+; ALU:inst1|RSFR_random_number[1]        ; Merged with ALU:inst1|LSFR_random_number[3]  ;
+; Total Number of Removed Registers = 28 ;                                              ;
++----------------------------------------+----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -344,24 +334,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 106   ;
+; Total registers                              ; 160   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 57    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 80    ;
+; Number of registers using Clock Enable       ; 134   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |main|ALU:inst1|hex3[2]                                   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |main|displayMux:Display_Multiplexer|right_four_digits[7] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |main|ALU:inst1|cipher1[2]                 ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |main|ALU:inst1|hex0[2]                    ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |main|displayMux:inst3|left_four_digits[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -390,22 +381,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 78                          ;
-; cycloneiii_ff         ; 106                         ;
+; cycloneiii_ff         ; 160                         ;
 ;     CLR               ; 25                          ;
-;     ENA               ; 48                          ;
+;     ENA               ; 86                          ;
 ;     ENA CLR           ; 32                          ;
+;     ENA SLD           ; 16                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 196                         ;
-;     arith             ; 24                          ;
+; cycloneiii_lcell_comb ; 280                         ;
+;     arith             ; 48                          ;
 ;         2 data inputs ; 24                          ;
-;     normal            ; 172                         ;
+;         3 data inputs ; 24                          ;
+;     normal            ; 232                         ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 63                          ;
-;         4 data inputs ; 86                          ;
+;         2 data inputs ; 59                          ;
+;         3 data inputs ; 52                          ;
+;         4 data inputs ; 112                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 2.47                        ;
+; Average LUT depth     ; 2.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -424,7 +417,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Thu Nov 22 16:38:52 2018
+    Info: Processing started: Sun Dec 09 14:28:01 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off version3 -c version3
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file varbitreg.vhd
@@ -465,51 +458,51 @@ Info (12021): Found 2 design units, including 1 entities, in source file setter.
     Info (12023): Found entity 1: setter
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "sevenSegDriver" for hierarchy "sevenSegDriver:inst22"
-Info (12128): Elaborating entity "displayMux" for hierarchy "displayMux:Display_Multiplexer"
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(46): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "displayMux" for hierarchy "displayMux:inst3"
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(47): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at displayMux.vhd(48): signal "original_message" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(51): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(52): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(56): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(57): signal "original_message" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(58): signal "output_message" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(61): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at displayMux.vhd(62): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(52): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(54): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(57): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(58): signal "original_message" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(59): signal "output_message" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(62): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at displayMux.vhd(63): signal "output_message" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at displayMux.vhd(36): inferring latch(es) for signal or variable "left_four_digits", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at displayMux.vhd(36): inferring latch(es) for signal or variable "right_four_digits", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "right_four_digits[0]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[1]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[2]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[3]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[4]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[5]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[6]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[7]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[8]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[9]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[10]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[11]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[12]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[13]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[14]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "right_four_digits[15]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[0]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[1]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[2]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[3]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[4]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[5]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[6]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[7]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[8]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[9]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[10]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[11]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[12]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[13]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[14]" at displayMux.vhd(36)
-Info (10041): Inferred latch for "left_four_digits[15]" at displayMux.vhd(36)
+Warning (10492): VHDL Process Statement warning at displayMux.vhd(64): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at displayMux.vhd(37): inferring latch(es) for signal or variable "left_four_digits", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at displayMux.vhd(37): inferring latch(es) for signal or variable "right_four_digits", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "right_four_digits[0]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[1]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[2]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[3]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[4]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[5]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[6]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[7]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[8]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[9]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[10]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[11]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[12]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[13]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[14]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "right_four_digits[15]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[0]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[1]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[2]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[3]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[4]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[5]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[6]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[7]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[8]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[9]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[10]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[11]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[12]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[13]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[14]" at displayMux.vhd(37)
+Info (10041): Inferred latch for "left_four_digits[15]" at displayMux.vhd(37)
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst1"
 Warning (10492): VHDL Process Statement warning at ALU.vhd(66): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(68): signal "clear" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -558,32 +551,32 @@ Info (10041): Inferred latch for "saved_message[12]" at setter.vhd(26)
 Info (10041): Inferred latch for "saved_message[13]" at setter.vhd(26)
 Info (10041): Inferred latch for "saved_message[14]" at setter.vhd(26)
 Info (10041): Inferred latch for "saved_message[15]" at setter.vhd(26)
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[0]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[1]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[2]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[3]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[4]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[5]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[6]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[7]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[8]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[9]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[10]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[11]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[12]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[13]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[14]" is permanently enabled
-Warning (14026): LATCH primitive "displayMux:Display_Multiplexer|right_four_digits[15]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[0]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[1]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[2]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[3]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[4]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[5]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[6]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[7]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[8]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[9]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[10]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[11]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[12]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[13]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[14]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:inst3|left_four_digits[15]" is permanently enabled
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 330 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 450 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 252 logic cells
+    Info (21061): Implemented 372 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Thu Nov 22 16:38:54 2018
+    Info: Peak virtual memory: 4728 megabytes
+    Info: Processing ended: Sun Dec 09 14:28:03 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

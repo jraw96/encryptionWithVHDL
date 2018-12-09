@@ -54,24 +54,6 @@ set_global_assignment -name VHDL_FILE ALU.vhd
 set_global_assignment -name VHDL_FILE Mux.vhd
 set_global_assignment -name VHDL_FILE sevenSegDriver.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_Y23 -to system_input[17]
-set_location_assignment PIN_Y24 -to system_input[16]
-set_location_assignment PIN_AA22 -to system_input[15]
-set_location_assignment PIN_AA23 -to system_input[14]
-set_location_assignment PIN_AA24 -to system_input[13]
-set_location_assignment PIN_AB23 -to system_input[12]
-set_location_assignment PIN_AB24 -to system_input[11]
-set_location_assignment PIN_AC24 -to system_input[10]
-set_location_assignment PIN_AB25 -to system_input[9]
-set_location_assignment PIN_AC25 -to system_input[8]
-set_location_assignment PIN_AB26 -to system_input[7]
-set_location_assignment PIN_AD26 -to system_input[6]
-set_location_assignment PIN_AC26 -to system_input[5]
-set_location_assignment PIN_AB27 -to system_input[4]
-set_location_assignment PIN_AD27 -to system_input[3]
-set_location_assignment PIN_AC27 -to system_input[2]
-set_location_assignment PIN_AC28 -to system_input[1]
-set_location_assignment PIN_AB28 -to system_input[0]
 set_location_assignment PIN_H22 -to digit1[6]
 set_location_assignment PIN_J22 -to digit1[5]
 set_location_assignment PIN_L25 -to digit1[4]
@@ -90,8 +72,6 @@ set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_M21 -to Reset
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name CDF_FILE output_files/Chain2.cdf
-set_location_assignment PIN_N21 -to pin_name4
-set_location_assignment PIN_R24 -to pin_name5
 set_location_assignment PIN_M23 -to Enable
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
 set_global_assignment -name CDF_FILE output_files/Chain4.cdf
@@ -147,6 +127,25 @@ set_global_assignment -name VHDL_FILE cipherBlockRegister.vhd
 set_global_assignment -name VHDL_FILE displayMux.vhd
 set_global_assignment -name VHDL_FILE bin2hex.vhd
 set_global_assignment -name VHDL_FILE setter.vhd
+set_location_assignment PIN_AB28 -to Switches[0]
+set_location_assignment PIN_N21 -to Set_Key
+set_location_assignment PIN_Y23 -to Switches[17]
+set_location_assignment PIN_Y24 -to Switches[16]
+set_location_assignment PIN_AA22 -to Switches[15]
+set_location_assignment PIN_AA23 -to Switches[14]
+set_location_assignment PIN_AA24 -to Switches[13]
+set_location_assignment PIN_AB23 -to Switches[12]
+set_location_assignment PIN_AB24 -to Switches[11]
+set_location_assignment PIN_AC24 -to Switches[10]
+set_location_assignment PIN_AB25 -to Switches[9]
+set_location_assignment PIN_AC25 -to Switches[8]
+set_location_assignment PIN_AB26 -to Switches[7]
+set_location_assignment PIN_AD26 -to Switches[6]
+set_location_assignment PIN_AC26 -to Switches[5]
+set_location_assignment PIN_AB27 -to Switches[4]
+set_location_assignment PIN_AD27 -to Switches[3]
+set_location_assignment PIN_AC27 -to Switches[2]
+set_location_assignment PIN_AC28 -to Switches[1]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
