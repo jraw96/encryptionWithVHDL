@@ -10,6 +10,7 @@ entity displayMux is
 		I1		: in std_logic_vector(15 downto 0); -- Pass the original message
 		I2		: in std_logic_vector(15 downto 0); -- Pass the seed value		
 		I3		: in std_logic_vector(1 downto 0); -- Select options for the Seven Segment displays
+		I4		: in std_logic_vector(15 downto 0); -- Display the current cipher block
 		
 
 		
@@ -31,10 +32,11 @@ signal mode : std_logic_vector(1 downto 0);
 
 signal output_message : std_logic_vector(15 downto 0);
 signal original_message : std_logic_vector(15 downto 0);
+signal currentCipher : std_logic_vector(15 downto 0);
 signal seed : std_logic_vector(15 downto 0);
 
 begin 
-	process(I0, I1, I2, I3)
+	process(I0, I1, I2, I3, I4)
 
 	begin
 
@@ -42,15 +44,16 @@ begin
 		original_message <= I1;
 		seed <= I2;
 		mode <= I3;
+		currentCipher <= I4;
 	 
 		-- Display the original 
 		if (mode = "00") then
 			left_four_digits <= original_message;
-			right_four_digits <= "0000000000000000";
+			right_four_digits <= currentCipher;
 			
 		-- Display the seed
 		elsif (mode = "01") then
-			left_four_digits <= "0000000000000000"; 
+			left_four_digits <= currentCipher; 
 			right_four_digits <= seed;
 			
 		-- Display original message on the left and the encrypted text on the right

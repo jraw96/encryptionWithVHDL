@@ -20,6 +20,7 @@ end setter;
 architecture arch of setter is
 
 signal mode_value : std_logic_vector(1 downto 0);
+signal switches_value : std_logic_vector(15 downto 0);
 
 
 begin 
@@ -28,6 +29,7 @@ begin
 	begin
 
 		mode_value <= mode;
+		switches_value <= switches;
 		
 		if set = '1' then
 	 
@@ -43,6 +45,13 @@ begin
 		
 			
 		end if;
+		
+		if (switches_value = "0000000000000000") then
+			saved_message <= "0000000000000000";
+			saved_seed <= "0000000000000000";
+		
+		end if;
+		
 	end process;
 	
 end architecture arch;

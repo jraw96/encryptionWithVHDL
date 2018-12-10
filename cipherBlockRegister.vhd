@@ -23,8 +23,9 @@ begin
    process(clk, previousBlock)
 	begin
 		previous_value <= previousBlock;
-   if (reset = '1') 
-		then Q <= "0000000000000000";
+   if (reset = '1') then 
+		Q <= "0000000000000000";
+		previous_value <= "0000000000000000";
 		
 	elsif en = '1' then
 		if clk'event and clk = '1' then

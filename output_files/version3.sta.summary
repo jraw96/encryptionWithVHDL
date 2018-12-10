@@ -3,87 +3,87 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.808
-TNS   : -80.678
+Slack : -3.839
+TNS   : -84.665
 
-Type  : Slow 1200mV 85C Model Setup 'customClock:clock|togglebit'
-Slack : -2.765
-TNS   : -95.464
-
-Type  : Slow 1200mV 85C Model Hold 'customClock:clock|togglebit'
-Slack : 0.119
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Setup 'customClock:inst4|togglebit'
+Slack : -3.372
+TNS   : -163.647
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.621
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'customClock:inst4|togglebit'
+Slack : 0.482
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -77.530
+TNS   : -98.090
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Set_Key'
 Slack : -3.000
 TNS   : -3.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'customClock:clock|togglebit'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'customClock:inst4|togglebit'
 Slack : -1.285
-TNS   : -131.070
+TNS   : -110.510
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.400
-TNS   : -68.162
+Slack : -3.455
+TNS   : -70.601
 
-Type  : Slow 1200mV 0C Model Setup 'customClock:clock|togglebit'
-Slack : -2.474
-TNS   : -80.927
-
-Type  : Slow 1200mV 0C Model Hold 'customClock:clock|togglebit'
-Slack : 0.091
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'customClock:inst4|togglebit'
+Slack : -3.040
+TNS   : -144.852
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.584
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'customClock:inst4|togglebit'
+Slack : 0.450
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -77.530
+TNS   : -98.090
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Set_Key'
 Slack : -3.000
 TNS   : -3.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'customClock:clock|togglebit'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'customClock:inst4|togglebit'
 Slack : -1.285
-TNS   : -131.070
+TNS   : -110.510
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.394
-TNS   : -12.544
+Slack : -1.359
+TNS   : -12.817
 
-Type  : Fast 1200mV 0C Model Setup 'customClock:clock|togglebit'
-Slack : -0.862
-TNS   : -19.979
-
-Type  : Fast 1200mV 0C Model Hold 'customClock:clock|togglebit'
-Slack : 0.018
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Setup 'customClock:inst4|togglebit'
+Slack : -1.142
+TNS   : -45.900
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.068
+Slack : 0.045
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'customClock:inst4|togglebit'
+Slack : 0.204
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -64.556
+TNS   : -81.508
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Set_Key'
 Slack : -3.000
 TNS   : -3.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'customClock:clock|togglebit'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'customClock:inst4|togglebit'
 Slack : -1.000
-TNS   : -102.000
+TNS   : -86.000
 
 ------------------------------------------------------------

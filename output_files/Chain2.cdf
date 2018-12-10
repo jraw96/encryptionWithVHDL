@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/Azorac/Desktop/version3/output_files/") File("version3.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("C:/Users/Azorac/Desktop/testingVHDL/encryptionWithVHDL/output_files/") File("version3.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

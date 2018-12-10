@@ -8,7 +8,7 @@ port
 (
 -- Input ports
 clk_source : in std_logic;
-reset      : in std_logic;
+
 -- Output ports
 clk_out    : out std_logic
 );
@@ -20,12 +20,11 @@ signal count: unsigned(24 downto 0) := (others=> '0');
 signal togglebit: std_logic := '0';
 
 begin
-Process(reset,clk_source) is
+Process(clk_source) is
     -- Declaration(s)
 begin
-	if (reset = '1') then
-		 count <= (others => '0');
-	elsif(clk_source'event and clk_source = '1') then
+
+	if(clk_source'event and clk_source = '1') then
 		 count <= count + 1;
 	 
 		if count = "1011111010111100001000000" then

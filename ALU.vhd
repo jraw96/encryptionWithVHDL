@@ -65,10 +65,9 @@ begin
 	begin
 		seed_value <= seed;
 	
-		if clear = '1' then -- Reset the block cipher chain	
-			output_text <= "0000000000000000";
+	
 			
-		elsif en = '1' then
+		if en = '1' then
 			if rising_edge(clk) then
 			
 				-- Step 1: Initialization the seed values using LSFR and RSFR
@@ -94,66 +93,82 @@ begin
 				-- Strategy: For encrypting each cipher block, add the LSFR_random_number and XOR the RSFR_random_number
 				if (mode = "10") then
 			
-					-- If there is no previous block cipher, used the seed value as an "initialization vector"
-					if blockCipher = "0000000000000000" then 		
-							
-						-- Step three: Assign the message and seed hexadecimal components 
-						hex0 <= message(3 downto 0);
-						hex1 <= message(7 downto 4);
-						hex2 <= message(11 downto 8);
-						hex3 <= message(15 downto 12);		
-					
-					-- If there is a previous block cipher, use the block cipher as the random number components
-					else
-					
-						-- Step three: Assign the message and seed hexadecimal components 
-						hex0 <= blockCipher(3 downto 0);
-						hex1 <= blockCipher(7 downto 4);
-						hex2 <= blockCipher(11 downto 8);
-						hex3 <= blockCipher(15 downto 12);			
-					
-					end if; 
-									
-						-- Step four: Perform the block cipher operation:
-						cipher0 <= std_logic_vector(signed(hex0) + signed(encryptAdd0)) XOR encryptXOR0;
-						cipher1 <= std_logic_vector(signed(hex1) + signed(encryptAdd1)) XOR encryptXOR1;
-						cipher2 <= std_logic_vector(signed(hex2) + signed(encryptAdd2)) XOR encryptXOR2;
-						cipher3 <= std_logic_vector(signed(hex3) + signed(encryptAdd3)) XOR encryptXOR3;
+						-- If there is no previous block cipher, used the seed value as an "initialization vector"
+						if blockCipher = "0000000000000000" then 		
+								
+							-- Step three: Assign the message and seed hexadecimal components 
+							hex0 <= message(3 downto 0);
+							hex1 <= message(7 downto 4);
+							hex2 <= message(11 downto 8);
+							hex3 <= message(15 downto 12);		
 						
-				output_text <= cipher3 & cipher2 & cipher1 & cipher0;
+						-- If there is a previous block cipher, use the block cipher as the random number components
+						else
+						
+							-- Step three: Assign the message and seed hexadecimal components 
+							hex0 <= blockCipher(3 downto 0);
+							hex1 <= blockCipher(7 downto 4);
+							hex2 <= blockCipher(11 downto 8);
+							hex3 <= blockCipher(15 downto 12);			
+						
+						end if; 
+										
+					-- Step four: Perform the block cipher operation:
+					cipher0 <= std_logic_vector(signed(hex0) + signed(encryptAdd0)) XOR encryptXOR0;
+					cipher1 <= std_logic_vector(signed(hex1) + signed(encryptAdd1)) XOR encryptXOR1;
+					cipher2 <= std_logic_vector(signed(hex2) + signed(encryptAdd2)) XOR encryptXOR2;
+					cipher3 <= std_logic_vector(signed(hex3) + signed(encryptAdd3)) XOR encryptXOR3;
+							
+					output_text <= cipher3 & cipher2 & cipher1 & cipher0;
 					
 				-- Perorm the decryption -- ############################################################################
 				elsif (mode = "11") then
 					
-					-- If there is no seed value or message, assume a value of "00000" and pretty much do nothing
-					if (seed = "0000000000000000") or (message = "0000000000000000") then 
-						output_text <= "0000000000000000";
-					
-					-- If there is no block cipher, beging by depcrypting the message
-					elsif (blockCipher = "0000000000000000") then
-						-- Step three: Assign the message and seed hexadecimal components 
-						hex0 <= message(3 downto 0);
-						hex1 <= message(7 downto 4);
-						hex2 <= message(11 downto 8);
-						hex3 <= message(15 downto 12);	
+						-- If there is no seed value or message, assume a value of "00000" and pretty much do nothing
+						if (seed = "0000000000000000") or (message = "0000000000000000") then 
+							output_text <= "0000000000000000";
 						
-					-- If there is a block cipher, treat that as the message
-					else
-						-- Step three: Assign the message and seed hexadecimal components 
-						hex0 <= blockCipher(3 downto 0);
-						hex1 <= blockCipher(7 downto 4);
-						hex2 <= blockCipher(11 downto 8);
-						hex3 <= blockCipher(15 downto 12);
+						-- If there is no block cipher, beging by depcrypting the message
+						elsif (blockCipher = "0000000000000000") then
+							-- Step three: Assign the message and seed hexadecimal components 
+							hex0 <= message(3 downto 0);
+							hex1 <= message(7 downto 4);
+							hex2 <= message(11 downto 8);
+							hex3 <= message(15 downto 12);	
+							
+							
+							-- Step 4: Perform the decryption logic
+							cipher0 <= std_logic_vector(signed(hex0 XOR encryptXOR0) - signed(encryptAdd0));
+							cipher1 <= std_logic_vector(signed(hex1 XOR encryptXOR1) - signed(encryptAdd1));
+							cipher2 <= std_logic_vector(signed(hex2 XOR encryptXOR2) - signed(encryptAdd2));
+							cipher3 <= std_logic_vector(signed(hex3 XOR encryptXOR3) - signed(encryptAdd3));
+								
+							output_text <= cipher3 & cipher2 & cipher1 & cipher0;
 					
-					end if; 
+							
+						-- If there is a block cipher, treat that as the message
+						else
+							-- Step three: Assign the message and seed hexadecimal components 
+							hex0 <= blockCipher(3 downto 0);
+							hex1 <= blockCipher(7 downto 4);
+							hex2 <= blockCipher(11 downto 8);
+							hex3 <= blockCipher(15 downto 12);
+							
+							-- Step 4: Perform the decryption logic
+							cipher0 <= std_logic_vector(signed(hex0 XOR encryptXOR0) - signed(encryptAdd0));
+							cipher1 <= std_logic_vector(signed(hex1 XOR encryptXOR1) - signed(encryptAdd1));
+							cipher2 <= std_logic_vector(signed(hex2 XOR encryptXOR2) - signed(encryptAdd2));
+							cipher3 <= std_logic_vector(signed(hex3 XOR encryptXOR3) - signed(encryptAdd3));
+								
+							output_text <= cipher3 & cipher2 & cipher1 & cipher0;
 					
-					-- Step 4: Perform the decryption logic
-					cipher0 <= std_logic_vector(signed(hex0 XOR encryptXOR0) - signed(encryptAdd0));
-					cipher1 <= std_logic_vector(signed(hex1 XOR encryptXOR1) - signed(encryptAdd1));
-					cipher2 <= std_logic_vector(signed(hex2 XOR encryptXOR2) - signed(encryptAdd2));
-					cipher3 <= std_logic_vector(signed(hex3 XOR encryptXOR3) - signed(encryptAdd3));
+						
+						end if; 
+	
 					
-					output_text <= cipher3 & cipher2 & cipher1 & cipher0;
+					
+				else 
+					output_text <= "0000000000000000";
 					
 				end if; -- End of encryption/decryption
 				
