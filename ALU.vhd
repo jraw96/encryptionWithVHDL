@@ -14,7 +14,7 @@ port(		message : IN std_logic_vector(15 downto 0); -- The 16 bit entered message
 			
 			blockCipher: IN std_logic_vector(15 downto 0); --  A block cipher
 			
-			en,clear,clk : in std_logic ; -- Used for keep track of state
+			en,clk : in std_logic ; -- Used for keep track of state
 			
 			
 			output_text : OUT std_logic_vector(15 downto 0) -- Output is a 32 bit string. The length is 2^n - 1, where n = 5

@@ -731,9 +731,9 @@ agreement for further details.
 	(annotation_block (parameter)(rect 576 304 760 336))
 )
 (symbol
-	(rect 856 120 1096 296)
+	(rect 856 120 1096 264)
 	(text "ALU" (rect 5 0 26 12)(font "Arial" ))
-	(text "inst25" (rect 8 160 37 172)(font "Arial" ))
+	(text "inst1" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -772,16 +772,9 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "clear" (rect 0 0 23 12)(font "Arial" ))
-		(text "clear" (rect 21 107 44 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
 		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 123 35 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128))
+		(text "clk" (rect 21 107 35 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
 	)
 	(port
 		(pt 240 32)
@@ -791,7 +784,7 @@ agreement for further details.
 		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 224 160))
+		(rectangle (rect 16 16 224 128))
 	)
 )
 (connector
@@ -835,28 +828,12 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 856 248)
-	(pt 760 248)
-)
-(connector
-	(pt 856 232)
-	(pt 776 232)
-)
-(connector
 	(pt 856 216)
 	(pt 792 216)
 )
 (connector
-	(pt 760 88)
-	(pt 600 88)
-)
-(connector
 	(pt 600 88)
 	(pt 600 -8)
-)
-(connector
-	(pt 760 88)
-	(pt 760 248)
 )
 (connector
 	(pt 776 -16)
@@ -877,10 +854,6 @@ agreement for further details.
 (connector
 	(pt 776 -16)
 	(pt 776 72)
-)
-(connector
-	(pt 776 72)
-	(pt 776 232)
 )
 (connector
 	(pt 792 -32)
@@ -1344,7 +1317,18 @@ agreement for further details.
 	(pt 256 224)
 	(pt 256 416)
 )
-(junction (pt 776 72))
+(connector
+	(pt 600 88)
+	(pt 776 88)
+)
+(connector
+	(pt 776 232)
+	(pt 776 88)
+)
+(connector
+	(pt 856 232)
+	(pt 776 232)
+)
 (junction (pt 792 56))
 (junction (pt 328 208))
 (junction (pt 312 192))

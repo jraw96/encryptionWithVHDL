@@ -6,15 +6,15 @@ digit1[3] <= sevenSegDriver:inst22.seven_segment_out[3]
 digit1[4] <= sevenSegDriver:inst22.seven_segment_out[4]
 digit1[5] <= sevenSegDriver:inst22.seven_segment_out[5]
 digit1[6] <= sevenSegDriver:inst22.seven_segment_out[6]
-Enable => ALU:inst25.en
+Enable => ALU:inst1.en
 Enable => cipherBlockRegister:inst6.en
 Enable => varbitreg:inst13.en
 Enable => varbitreg:inst14.en
-Reset => inst7.IN0
 clk => customClock:inst4.clk_source
 clk => cipherBlockRegister:inst6.clk
 clk => varbitreg:inst13.clk
 clk => varbitreg:inst14.clk
+Reset => inst7.IN0
 Set_Key => inst5.IN0
 Switches[0] => setter:inst.switches[0]
 Switches[1] => setter:inst.switches[1]
@@ -33,10 +33,10 @@ Switches[13] => setter:inst.switches[13]
 Switches[14] => setter:inst.switches[14]
 Switches[15] => setter:inst.switches[15]
 Switches[16] => setter:inst.mode[0]
-Switches[16] => ALU:inst25.mode[0]
+Switches[16] => ALU:inst1.mode[0]
 Switches[16] => displayMux:inst11.I3[0]
 Switches[17] => setter:inst.mode[1]
-Switches[17] => ALU:inst25.mode[1]
+Switches[17] => ALU:inst1.mode[1]
 Switches[17] => displayMux:inst11.I3[1]
 digit2[0] <= sevenSegDriver:inst15.seven_segment_out[0]
 digit2[1] <= sevenSegDriver:inst15.seven_segment_out[1]
@@ -298,7 +298,7 @@ right_four_digits[14] <= right_four_digits[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
 right_four_digits[15] <= right_four_digits[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|ALU:inst25
+|main|ALU:inst1
 message[0] => hex0.DATAB
 message[0] => Equal3.IN15
 message[1] => hex0.DATAB
@@ -531,7 +531,6 @@ en => output_text[4]~reg0.ENA
 en => output_text[3]~reg0.ENA
 en => output_text[2]~reg0.ENA
 en => output_text[1]~reg0.ENA
-clear => ~NO_FANOUT~
 clk => output_text[0]~reg0.CLK
 clk => output_text[1]~reg0.CLK
 clk => output_text[2]~reg0.CLK

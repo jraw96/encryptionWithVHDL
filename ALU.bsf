@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 256 192)
+	(rect 16 16 256 160)
 	(text "ALU" (rect 5 0 26 12)(font "Arial" ))
-	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -62,16 +62,9 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "clear" (rect 0 0 18 12)(font "Arial" ))
-		(text "clear" (rect 21 107 39 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 1))
-	)
-	(port
-		(pt 0 128)
-		(input)
 		(text "clk" (rect 0 0 10 12)(font "Arial" ))
-		(text "clk" (rect 21 123 31 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 1))
+		(text "clk" (rect 21 107 31 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
 		(pt 240 32)
@@ -81,6 +74,6 @@ agreement for further details.
 		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 224 160)(line_width 1))
+		(rectangle (rect 16 16 224 128)(line_width 1))
 	)
 )
